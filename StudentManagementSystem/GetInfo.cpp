@@ -3,7 +3,7 @@
 using namespace std;
 int sum, ct = 0, allsame = 0, state = 1, start = 1;
 char ins;
-struct stu
+struct student
 {
     char name[15], bir[15];
     char ge[10];
@@ -70,8 +70,14 @@ int main()
     start = sum + 1;
     freopen("Cache//State.txt", "w", stdout);
     printf("1\n");
-    freopen("Data//InPut.txt", "r", stdin);
-    scanf(" %d", &sum);
+    while (1)
+    {
+        freopen("Data//InPut.txt", "r", stdin);
+        scanf(" %d", &sum);
+        if (sum)
+            break;
+        MessageBox(NULL, TEXT("请按照格式在StudentManagementSystem/Data/InPut.txt内填充数据后单击确定。"), TEXT("错误"), MB_ICONERROR | MB_OK);
+    }
     int taile = sum + start - 1;
     inputcheck(start, taile);
     freopen("Cache//Cache.txt", "w", stdout);
@@ -88,13 +94,18 @@ int main()
              << member[i].naid << endl;
     freopen("CON", "w", stdout);
     cout << "数据录入完成。" << endl;
-    if (ct)
-        cout << "与原有数据有" << ct << "处冲突,已用新数据覆盖。" << endl;
-    if (allsame)
-        cout << "有" << allsame << "处完全相同" << endl;
     if (allsame || ct)
-        cout << "如有异议请及时查看。" << endl;
-    cout << "本次数据录入窗口将在7秒内关闭。" << endl;
-    Sleep(7000);
+        cout << "与已录入数据有";
+    if (ct)
+        cout << ct << "处冲突";
+    if (allsame && ct)
+        cout << ",";
+    if (allsame)
+        cout << allsame << "处完全相同";
+    if (allsame || ct)
+        cout << "。已使用新数据覆盖。" << endl
+             << "如有异议请及时查看。" << endl;
+    freopen("CON", "r", stdin);
+    system("pause");
     return 0;
 }

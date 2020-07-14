@@ -10,12 +10,16 @@ int main()
     {
         cout << "欢迎来到学生管理系统。" << endl
              << "请输入要进行的操作的序号。 " << endl;
-        cout << "1.索引；" << endl
+        cout << "1.检索" << endl
              << "2.删除" << endl
              << "3.修改" << endl
              << "4.增加" << endl;
         scanf(" %d", &getin);
-        if (getin == 4)
+        if (getin == 1)
+        {
+           
+        }
+        else if (getin == 4)
         {
             cout << "请按照格式在StudentManagementSystem/Data/InPut.txt内填充数据,然后输入“yes”。" << endl;
             while (1)
