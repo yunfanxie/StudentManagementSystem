@@ -17,7 +17,8 @@ int main()
         scanf(" %d", &getin);
         if (getin == 1)
         {
-           
+            system("start DataSearchTool.exe");
+            system("cls");
         }
         else if (getin == 4)
         {
