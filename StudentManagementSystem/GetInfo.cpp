@@ -1,18 +1,24 @@
 #include <bits/stdc++.h>
 #include <windows.h>
 using namespace std;
-int sum, ct = 0, allsame = 0, state = 1, start = 1;
+int sum, ct = 0, allsame = 0, start = 1, tt;
 char ins;
 struct student
 {
     char name[15], bir[15];
     char ge[10];
     char intoy[12], cla[3], clid[3], scid[25], naid[25];
+    char record[50][50];
+    int rsum;
 } member[100000];
 void input(int head, int tail)
 {
     for (int i = head; i <= tail; i++)
         cin >> member[i].name >> member[i].ge >> member[i].bir >> member[i].intoy >> member[i].cla >> member[i].clid >> member[i].scid >> member[i].naid;
+}
+bool control(student x, student y)
+{
+    return strcmp(x.scid, y.scid) < 0;
 }
 void inputcheck(int head, int tail)
 {
@@ -62,24 +68,31 @@ void inputcheck(int head, int tail)
 }
 int main()
 {
-    freopen("Cache//State.txt", "r", stdin);
-    scanf(" %d", &state);
+    for (int i = 0; i <= 100000; i++)
+        member[i].rsum = 0;
+    freopen("Cache//Record.txt", "r", stdin);
+    scanf(" %d", &tt);
+    for (int i = 1; i <= tt; i++)
+    {
+        scanf(" %d", &member[i].rsum);
+        for (int j = 1; j <= member[i].rsum; j++)
+            cin >> member[i].record[j];
+    }
     freopen("Cache//Cache.txt", "r", stdin);
     scanf(" %d", &sum);
     input(1, sum);
     start = sum + 1;
-    freopen("Cache//State.txt", "w", stdout);
-    printf("1\n");
     while (1)
     {
-        freopen("Data//InPut.txt", "r", stdin);
+        freopen("Data//AddInPut.txt", "r", stdin);
         scanf(" %d", &sum);
         if (sum)
             break;
-        MessageBox(NULL, TEXT("请按照格式在StudentManagementSystem/Data/InPut.txt内填充数据后单击确定。"), TEXT("错误"), MB_ICONERROR | MB_OK);
+        MessageBox(NULL, TEXT("请按照格式在StudentManagementSystem/Data/AddInPut.txt内填充数据后单击确定。"), TEXT("错误"), MB_ICONERROR | MB_OK);
     }
     int taile = sum + start - 1;
     inputcheck(start, taile);
+    sort(member + 1, member + 1 + taile, control);
     freopen("Cache//Cache.txt", "w", stdout);
     taile = taile - ct - allsame;
     printf("%d\n", taile);
@@ -92,6 +105,15 @@ int main()
              << member[i].clid << endl
              << member[i].scid << endl
              << member[i].naid << endl;
+    freopen("Cache//Record.txt", "w", stdout);
+    tt = taile;
+    printf("%d\n", tt);
+    for (int i = 1; i <= tt; i++)
+    {
+        printf("%d\n", member[i].rsum);
+        for (int j = 1; j <= member[i].rsum; j++)
+            cout << member[i].record[j] << endl;
+    }
     freopen("CON", "w", stdout);
     cout << "数据录入完成。" << endl;
     if (allsame || ct)

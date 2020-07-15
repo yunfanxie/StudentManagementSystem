@@ -14,6 +14,20 @@ struct student
 } member[100000];
 int main()
 {
+    while (1)
+    {
+        freopen("Cache//Cache.txt", "r", stdin);
+        scanf(" %d", &tail);
+        if (tail)
+            break;
+        MessageBox(NULL, TEXT("暂无数据。请按照格式录入数据再进行检索。"), TEXT("错误"), MB_ICONERROR | MB_OK);
+        return 0;
+    }
+    for (int i = 1; i <= tail; i++)
+    {
+        cin >> member[i].name >> member[i].ge >> member[i].bir >> member[i].intoy >> member[i].cla >> member[i].clid >> member[i].scid >> member[i].naid;
+    }
+    freopen("CON ", "r", stdin);
     cout << "请输入要检索的关键词的序号。" << endl;
     cout << "1.姓名" << endl
          << "2.性别" << endl
@@ -24,12 +38,6 @@ int main()
          << "7.校内ID" << endl
          << "8.学籍号" << endl;
     scanf(" %d", &getin);
-    freopen("Cache//Cache.txt", "r", stdin);
-    scanf(" %d", &tail);
-    for (int i = 1; i <= tail; i++)
-    {
-        cin >> member[i].name >> member[i].ge >> member[i].bir >> member[i].intoy >> member[i].cla >> member[i].clid >> member[i].scid >> member[i].naid;
-    }
     freopen("CON", "r", stdin);
     if (getin == 1)
     {
@@ -150,7 +158,7 @@ int main()
     }
     else if (getin == 4)
     {
-        cout << "请输入要检索的性别" << endl;
+        cout << "请输入要检索的入学年份" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -189,7 +197,7 @@ int main()
     }
     else if (getin == 5)
     {
-        cout << "请输入要检索的性别" << endl;
+        cout << "请输入要检索的班级" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -228,7 +236,7 @@ int main()
     }
     else if (getin == 6)
     {
-        cout << "请输入要检索的性别" << endl;
+        cout << "请输入要检索的座位号" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -267,7 +275,7 @@ int main()
     }
     else if (getin == 7)
     {
-        cout << "请输入要检索的性别" << endl;
+        cout << "请输入要检索的校内ID" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -306,7 +314,7 @@ int main()
     }
     else if (getin == 8)
     {
-        cout << "请输入要检索的性别" << endl;
+        cout << "请输入要检索的学籍号" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
