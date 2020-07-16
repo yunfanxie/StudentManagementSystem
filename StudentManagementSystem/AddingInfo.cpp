@@ -1,8 +1,10 @@
 #include <bits/stdc++.h>
 #include <windows.h>
 using namespace std;
-int sum, ct = 0, allsame = 0, start = 1, tt;
+//Name;Male||Famale;The birthday;The year got into school;The Class;Class ID;School ID;National ID;
+int sum, ct = 0, allsame = 0, start = 1, tt, ls;
 char ins;
+HWND hwnd = GetForegroundWindow();
 struct student
 {
     char name[15], bir[15];
@@ -22,11 +24,13 @@ bool control(student x, student y)
 }
 void inputcheck(int head, int tail)
 {
+    ls = 0;
     freopen("CON", "w", stdout);
     for (int i = head; i <= tail; i++)
     {
+        ls += 1;
         cin >> member[i].name >> member[i].ge >> member[i].bir >> member[i].intoy >> member[i].cla >> member[i].clid >> member[i].scid >> member[i].naid;
-        cout << "No." << i - head + 1 << endl
+        cout << "No." << ls << endl
              << "姓名：" << member[i].name << endl
              << "性别：" << member[i].ge << endl
              << "出生日期：" << member[i].bir << endl
@@ -36,7 +40,7 @@ void inputcheck(int head, int tail)
              << "校内ID：" << member[i].scid << endl
              << "学籍号：" << member[i].naid << endl
              << endl;
-        for (int j = 1; j < i; j++)
+        for (int j = 1; j <= head - 1; j++)
         {
             int count = 0;
             if (strcmp(member[i].name, member[j].name) == 0)
@@ -68,6 +72,7 @@ void inputcheck(int head, int tail)
 }
 int main()
 {
+    ShowWindow(hwnd, SW_MAXIMIZE);
     for (int i = 0; i <= 100000; i++)
         member[i].rsum = 0;
     freopen("Cache//Record.txt", "r", stdin);
@@ -92,9 +97,9 @@ int main()
     }
     int taile = sum + start - 1;
     inputcheck(start, taile);
+    taile = taile - ct - allsame;
     sort(member + 1, member + 1 + taile, control);
     freopen("Cache//Cache.txt", "w", stdout);
-    taile = taile - ct - allsame;
     printf("%d\n", taile);
     for (int i = 1; i <= taile; i++)
         cout << member[i].name << endl

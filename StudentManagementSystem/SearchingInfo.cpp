@@ -1,19 +1,21 @@
 #include <bits/stdc++.h>
 #include <windows.h>
 using namespace std;
+//Name;Male||Famale;The birthday;The year got into school;The Class;Class ID;School ID;National ID;
 int getin, tail;
 int location[100000];
 int number = 0;
 char in[30];
-//Name;Male||Famale;The birthday;The year got into school;The Class;Class ID;School ID;National ID;
 struct student
 {
     char name[15], bir[15];
     char ge[10];
     char intoy[12], cla[3], clid[3], scid[25], naid[25];
 } member[100000];
+HWND hwnd = GetForegroundWindow();
 int main()
 {
+    ShowWindow(hwnd, SW_MAXIMIZE);
     while (1)
     {
         freopen("Cache//Cache.txt", "r", stdin);
@@ -28,7 +30,7 @@ int main()
         cin >> member[i].name >> member[i].ge >> member[i].bir >> member[i].intoy >> member[i].cla >> member[i].clid >> member[i].scid >> member[i].naid;
     }
     freopen("CON ", "r", stdin);
-    cout << "请输入要检索的关键词的序号。" << endl;
+    cout << "请输入要检索信息的关键词的序号。" << endl;
     cout << "1.姓名" << endl
          << "2.性别" << endl
          << "3.出生日期" << endl
@@ -84,7 +86,7 @@ int main()
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
-            if (strcmp(member[i].name, in) == 0)
+            if (strcmp(member[i].ge, in) == 0)
             {
                 number += 1;
                 location[number] = i;
@@ -123,7 +125,7 @@ int main()
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
-            if (strcmp(member[i].name, in) == 0)
+            if (strcmp(member[i].bir, in) == 0)
             {
                 number += 1;
                 location[number] = i;
@@ -162,7 +164,7 @@ int main()
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
-            if (strcmp(member[i].name, in) == 0)
+            if (strcmp(member[i].intoy, in) == 0)
             {
                 number += 1;
                 location[number] = i;
@@ -201,7 +203,7 @@ int main()
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
-            if (strcmp(member[i].name, in) == 0)
+            if (strcmp(member[i].cla, in) == 0)
             {
                 number += 1;
                 location[number] = i;
@@ -240,7 +242,7 @@ int main()
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
-            if (strcmp(member[i].name, in) == 0)
+            if (strcmp(member[i].clid, in) == 0)
             {
                 number += 1;
                 location[number] = i;
@@ -279,7 +281,7 @@ int main()
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
-            if (strcmp(member[i].name, in) == 0)
+            if (strcmp(member[i].scid, in) == 0)
             {
                 number += 1;
                 location[number] = i;
@@ -318,7 +320,7 @@ int main()
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
-            if (strcmp(member[i].name, in) == 0)
+            if (strcmp(member[i].naid, in) == 0)
             {
                 number += 1;
                 location[number] = i;

@@ -1,11 +1,13 @@
 #include <bits/stdc++.h>
 #include <windows.h>
 using namespace std;
+//Name;Male||Famale;The birthday;The year got into school;The Class;Class ID;School ID;National ID;
 int getin;
 char in[10];
-//Name;Male||Famale;The birthday;The year got into school;The Class;Class ID;School ID;National ID;
+HWND hwnd = GetForegroundWindow();
 int main()
 {
+    ShowWindow(hwnd, SW_MAXIMIZE);
     while (1)
     {
         cout << "欢迎来到学生管理系统。" << endl
@@ -21,7 +23,7 @@ int main()
         scanf(" %d", &getin);
         if (getin == 1)
         {
-            system("start DataSearchTool.exe");
+            system("start Searching.exe");
             system("cls");
         }
         else if (getin == 2)
@@ -39,11 +41,24 @@ int main()
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                     break;
             }
-            system("start GetInfo.exe");
+            system("start AddingInfo.exe");
             system("cls");
         }
         else if (getin == 5)
         {
+            system("start SearchingRecords.exe");
+            system("cls");
+        }
+        else if (getin == 6)
+        {
+        }
+        else if (getin == 7)
+        {
+        }
+        else if (getin == 8)
+        {
+            system("start AddingRecords.exe");
+            system("cls");
         }
     }
     return 0;
