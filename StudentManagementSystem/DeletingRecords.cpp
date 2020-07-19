@@ -2,7 +2,8 @@
 #include <windows.h>
 using namespace std;
 //Name;Male||Famale;The birthday;The year got into school;The Class;Class ID;School ID;National ID;
-int getin, tail, tt;
+HWND hwnd = GetForegroundWindow();
+int getin, tail, tt, gin;
 int location[100000];
 int number = 0;
 char in[30];
@@ -14,7 +15,25 @@ struct student
     char record[50][50];
     int rsum;
 } member[100000];
-HWND hwnd = GetForegroundWindow();
+void Refresh()
+{
+    freopen("Cache//Record.txt", "w", stdout);
+    printf("%d\n", tt);
+    for (int i = 1; i <= tt; i++)
+    {
+        printf("%d\n", member[i].rsum);
+        for (int j = 1; j <= member[i].rsum; j++)
+            cout << member[i].record[j] << endl;
+    }
+    freopen("CON", "w", stdout);
+}
+void DeleteRecords(int loca, int details)
+{
+    for (int i = details; i < member[loca].rsum; i++)
+        strcpy(member[loca].record[i], member[loca].record[i + 1]);
+    member[loca].rsum -= 1;
+    Refresh();
+}
 int main()
 {
     ShowWindow(hwnd, SW_MAXIMIZE);
@@ -24,7 +43,7 @@ int main()
         scanf(" %d", &tail);
         if (tail)
             break;
-        MessageBox(NULL, TEXT("暂无数据。请按照格式录入数据再进行检索。"), TEXT("错误"), MB_ICONERROR | MB_OK);
+        MessageBox(NULL, TEXT("暂无数据。请按照格式录入数据再进行删除。"), TEXT("错误"), MB_ICONERROR | MB_OK);
         return 0;
     }
     for (int i = 1; i <= tail; i++)
@@ -40,7 +59,7 @@ int main()
             cin >> member[i].record[j];
     }
     freopen("CON ", "r", stdin);
-    cout << "请输入要检索记录的学生的信息关键词的序号。" << endl;
+    cout << "请输入要删除记录的学生的信息关键词的序号。" << endl;
     cout << "1.姓名" << endl
          << "2.性别" << endl
          << "3.出生日期" << endl
@@ -53,7 +72,7 @@ int main()
     freopen("CON", "r", stdin);
     if (getin == 1)
     {
-        cout << "请输入要检索记录的学生的姓名" << endl;
+        cout << "请输入要删除记录的学生的姓名" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -87,6 +106,20 @@ int main()
                 cout << member[location[1]].record[j] << endl
                      << endl;
             }
+            cout << "请输入要删除的记录的序号" << endl;
+            scanf(" %d", &gin);
+            while (1)
+            {
+                cout << "确认删除请输入“yes”。" << endl;
+                cin >> in;
+                if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
+                {
+                    DeleteRecords(location[1], gin);
+                    cout << "删除成功！" << endl;
+                    break;
+                }
+                cout << "输入错误！";
+            }
             system("pause");
             return 0;
         }
@@ -107,13 +140,27 @@ int main()
                      << "学籍号：" << member[location[j]].naid << endl
                      << endl;
             }
-            cout << "请输入要检索记录的学生的序号" << endl;
+            cout << "请输入要删除记录的学生的序号" << endl;
             scanf(" %d", &getin);
             for (int j = 1; j <= member[location[getin]].rsum; j++)
             {
                 cout << "No." << j << endl;
-                cout << member[location[getin]].record[j] << endl
+                cout << member[location[1]].record[j] << endl
                      << endl;
+            }
+            cout << "请输入要删除的记录的序号" << endl;
+            scanf(" %d", &gin);
+            while (1)
+            {
+                cout << "确认删除请输入“yes”。" << endl;
+                cin >> in;
+                if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
+                {
+                    DeleteRecords(location[getin], gin);
+                    cout << "删除成功！" << endl;
+                    break;
+                }
+                cout << "输入错误！";
             }
             system("pause");
             return 0;
@@ -121,7 +168,7 @@ int main()
     }
     else if (getin == 2)
     {
-        cout << "请输入要检索记录的学生的性别" << endl;
+        cout << "请输入要删除记录的学生的性别" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -155,6 +202,20 @@ int main()
                 cout << member[location[1]].record[j] << endl
                      << endl;
             }
+            cout << "请输入要删除的记录的序号" << endl;
+            scanf(" %d", &gin);
+            while (1)
+            {
+                cout << "确认删除请输入“yes”。" << endl;
+                cin >> in;
+                if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
+                {
+                    DeleteRecords(location[1], gin);
+                    cout << "删除成功！" << endl;
+                    break;
+                }
+                cout << "输入错误！";
+            }
             system("pause");
             return 0;
         }
@@ -175,13 +236,27 @@ int main()
                      << "学籍号：" << member[location[j]].naid << endl
                      << endl;
             }
-            cout << "请输入要检索记录的学生的序号" << endl;
+            cout << "请输入要删除记录的学生的序号" << endl;
             scanf(" %d", &getin);
             for (int j = 1; j <= member[location[getin]].rsum; j++)
             {
                 cout << "No." << j << endl;
-                cout << member[location[getin]].record[j] << endl
+                cout << member[location[1]].record[j] << endl
                      << endl;
+            }
+            cout << "请输入要删除的记录的序号" << endl;
+            scanf(" %d", &gin);
+            while (1)
+            {
+                cout << "确认删除请输入“yes”。" << endl;
+                cin >> in;
+                if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
+                {
+                    DeleteRecords(location[getin], gin);
+                    cout << "删除成功！" << endl;
+                    break;
+                }
+                cout << "输入错误！";
             }
             system("pause");
             return 0;
@@ -189,7 +264,7 @@ int main()
     }
     else if (getin == 3)
     {
-        cout << "请输入要检索记录的学生的出生日期" << endl;
+        cout << "请输入要删除记录的学生的出生日期" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -223,6 +298,20 @@ int main()
                 cout << member[location[1]].record[j] << endl
                      << endl;
             }
+            cout << "请输入要删除的记录的序号" << endl;
+            scanf(" %d", &gin);
+            while (1)
+            {
+                cout << "确认删除请输入“yes”。" << endl;
+                cin >> in;
+                if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
+                {
+                    DeleteRecords(location[1], gin);
+                    cout << "删除成功！" << endl;
+                    break;
+                }
+                cout << "输入错误！";
+            }
             system("pause");
             return 0;
         }
@@ -243,13 +332,27 @@ int main()
                      << "学籍号：" << member[location[j]].naid << endl
                      << endl;
             }
-            cout << "请输入要检索记录的学生的序号" << endl;
+            cout << "请输入要删除记录的学生的序号" << endl;
             scanf(" %d", &getin);
             for (int j = 1; j <= member[location[getin]].rsum; j++)
             {
                 cout << "No." << j << endl;
-                cout << member[location[getin]].record[j] << endl
+                cout << member[location[1]].record[j] << endl
                      << endl;
+            }
+            cout << "请输入要删除的记录的序号" << endl;
+            scanf(" %d", &gin);
+            while (1)
+            {
+                cout << "确认删除请输入“yes”。" << endl;
+                cin >> in;
+                if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
+                {
+                    DeleteRecords(location[getin], gin);
+                    cout << "删除成功！" << endl;
+                    break;
+                }
+                cout << "输入错误！";
             }
             system("pause");
             return 0;
@@ -257,7 +360,7 @@ int main()
     }
     else if (getin == 4)
     {
-        cout << "请输入要检索记录的学生的入学年份" << endl;
+        cout << "请输入要删除记录的学生的入学年份" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -291,6 +394,20 @@ int main()
                 cout << member[location[1]].record[j] << endl
                      << endl;
             }
+            cout << "请输入要删除的记录的序号" << endl;
+            scanf(" %d", &gin);
+            while (1)
+            {
+                cout << "确认删除请输入“yes”。" << endl;
+                cin >> in;
+                if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
+                {
+                    DeleteRecords(location[1], gin);
+                    cout << "删除成功！" << endl;
+                    break;
+                }
+                cout << "输入错误！";
+            }
             system("pause");
             return 0;
         }
@@ -311,13 +428,27 @@ int main()
                      << "学籍号：" << member[location[j]].naid << endl
                      << endl;
             }
-            cout << "请输入要检索记录的学生的序号" << endl;
+            cout << "请输入要删除记录的学生的序号" << endl;
             scanf(" %d", &getin);
             for (int j = 1; j <= member[location[getin]].rsum; j++)
             {
                 cout << "No." << j << endl;
-                cout << member[location[getin]].record[j] << endl
+                cout << member[location[1]].record[j] << endl
                      << endl;
+            }
+            cout << "请输入要删除的记录的序号" << endl;
+            scanf(" %d", &gin);
+            while (1)
+            {
+                cout << "确认删除请输入“yes”。" << endl;
+                cin >> in;
+                if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
+                {
+                    DeleteRecords(location[getin], gin);
+                    cout << "删除成功！" << endl;
+                    break;
+                }
+                cout << "输入错误！";
             }
             system("pause");
             return 0;
@@ -325,7 +456,7 @@ int main()
     }
     else if (getin == 5)
     {
-        cout << "请输入要检索记录的学生的班级" << endl;
+        cout << "请输入要删除记录的学生的班级" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -359,6 +490,20 @@ int main()
                 cout << member[location[1]].record[j] << endl
                      << endl;
             }
+            cout << "请输入要删除的记录的序号" << endl;
+            scanf(" %d", &gin);
+            while (1)
+            {
+                cout << "确认删除请输入“yes”。" << endl;
+                cin >> in;
+                if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
+                {
+                    DeleteRecords(location[1], gin);
+                    cout << "删除成功！" << endl;
+                    break;
+                }
+                cout << "输入错误！";
+            }
             system("pause");
             return 0;
         }
@@ -379,13 +524,27 @@ int main()
                      << "学籍号：" << member[location[j]].naid << endl
                      << endl;
             }
-            cout << "请输入要检索记录的学生的序号" << endl;
+            cout << "请输入要删除记录的学生的序号" << endl;
             scanf(" %d", &getin);
             for (int j = 1; j <= member[location[getin]].rsum; j++)
             {
                 cout << "No." << j << endl;
-                cout << member[location[getin]].record[j] << endl
+                cout << member[location[1]].record[j] << endl
                      << endl;
+            }
+            cout << "请输入要删除的记录的序号" << endl;
+            scanf(" %d", &gin);
+            while (1)
+            {
+                cout << "确认删除请输入“yes”。" << endl;
+                cin >> in;
+                if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
+                {
+                    DeleteRecords(location[getin], gin);
+                    cout << "删除成功！" << endl;
+                    break;
+                }
+                cout << "输入错误！";
             }
             system("pause");
             return 0;
@@ -393,7 +552,7 @@ int main()
     }
     else if (getin == 6)
     {
-        cout << "请输入要检索记录的学生的座位号" << endl;
+        cout << "请输入要删除记录的学生的座位号" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -427,6 +586,20 @@ int main()
                 cout << member[location[1]].record[j] << endl
                      << endl;
             }
+            cout << "请输入要删除的记录的序号" << endl;
+            scanf(" %d", &gin);
+            while (1)
+            {
+                cout << "确认删除请输入“yes”。" << endl;
+                cin >> in;
+                if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
+                {
+                    DeleteRecords(location[1], gin);
+                    cout << "删除成功！" << endl;
+                    break;
+                }
+                cout << "输入错误！";
+            }
             system("pause");
             return 0;
         }
@@ -447,13 +620,27 @@ int main()
                      << "学籍号：" << member[location[j]].naid << endl
                      << endl;
             }
-            cout << "请输入要检索记录的学生的序号" << endl;
+            cout << "请输入要删除记录的学生的序号" << endl;
             scanf(" %d", &getin);
             for (int j = 1; j <= member[location[getin]].rsum; j++)
             {
                 cout << "No." << j << endl;
-                cout << member[location[getin]].record[j] << endl
+                cout << member[location[1]].record[j] << endl
                      << endl;
+            }
+            cout << "请输入要删除的记录的序号" << endl;
+            scanf(" %d", &gin);
+            while (1)
+            {
+                cout << "确认删除请输入“yes”。" << endl;
+                cin >> in;
+                if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
+                {
+                    DeleteRecords(location[getin], gin);
+                    cout << "删除成功！" << endl;
+                    break;
+                }
+                cout << "输入错误！";
             }
             system("pause");
             return 0;
@@ -461,7 +648,7 @@ int main()
     }
     else if (getin == 7)
     {
-        cout << "请输入要检索记录的学生的校内ID" << endl;
+        cout << "请输入要删除记录的学生的校内ID" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -495,6 +682,20 @@ int main()
                 cout << member[location[1]].record[j] << endl
                      << endl;
             }
+            cout << "请输入要删除的记录的序号" << endl;
+            scanf(" %d", &gin);
+            while (1)
+            {
+                cout << "确认删除请输入“yes”。" << endl;
+                cin >> in;
+                if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
+                {
+                    DeleteRecords(location[1], gin);
+                    cout << "删除成功！" << endl;
+                    break;
+                }
+                cout << "输入错误！";
+            }
             system("pause");
             return 0;
         }
@@ -515,13 +716,27 @@ int main()
                      << "学籍号：" << member[location[j]].naid << endl
                      << endl;
             }
-            cout << "请输入要检索记录的学生的序号" << endl;
+            cout << "请输入要删除记录的学生的序号" << endl;
             scanf(" %d", &getin);
             for (int j = 1; j <= member[location[getin]].rsum; j++)
             {
                 cout << "No." << j << endl;
-                cout << member[location[getin]].record[j] << endl
+                cout << member[location[1]].record[j] << endl
                      << endl;
+            }
+            cout << "请输入要删除的记录的序号" << endl;
+            scanf(" %d", &gin);
+            while (1)
+            {
+                cout << "确认删除请输入“yes”。" << endl;
+                cin >> in;
+                if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
+                {
+                    DeleteRecords(location[getin], gin);
+                    cout << "删除成功！" << endl;
+                    break;
+                }
+                cout << "输入错误！";
             }
             system("pause");
             return 0;
@@ -529,7 +744,7 @@ int main()
     }
     else if (getin == 8)
     {
-        cout << "请输入要检索记录的学生的学籍号" << endl;
+        cout << "请输入要删除记录的学生的学籍号" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -563,6 +778,20 @@ int main()
                 cout << member[location[1]].record[j] << endl
                      << endl;
             }
+            cout << "请输入要删除的记录的序号" << endl;
+            scanf(" %d", &gin);
+            while (1)
+            {
+                cout << "确认删除请输入“yes”。" << endl;
+                cin >> in;
+                if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
+                {
+                    DeleteRecords(location[1], gin);
+                    cout << "删除成功！" << endl;
+                    break;
+                }
+                cout << "输入错误！";
+            }
             system("pause");
             return 0;
         }
@@ -583,13 +812,27 @@ int main()
                      << "学籍号：" << member[location[j]].naid << endl
                      << endl;
             }
-            cout << "请输入要检索记录的学生的序号" << endl;
+            cout << "请输入要删除记录的学生的序号" << endl;
             scanf(" %d", &getin);
             for (int j = 1; j <= member[location[getin]].rsum; j++)
             {
                 cout << "No." << j << endl;
-                cout << member[location[getin]].record[j] << endl
+                cout << member[location[1]].record[j] << endl
                      << endl;
+            }
+            cout << "请输入要删除的记录的序号" << endl;
+            scanf(" %d", &gin);
+            while (1)
+            {
+                cout << "确认删除请输入“yes”。" << endl;
+                cin >> in;
+                if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
+                {
+                    DeleteRecords(location[getin], gin);
+                    cout << "删除成功！" << endl;
+                    break;
+                }
+                cout << "输入错误！";
             }
             system("pause");
             return 0;

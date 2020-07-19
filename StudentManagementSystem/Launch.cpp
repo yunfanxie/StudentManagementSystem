@@ -23,11 +23,13 @@ int main()
         scanf(" %d", &getin);
         if (getin == 1)
         {
-            system("start Searching.exe");
+            system("start SearchingInfo.exe");
             system("cls");
         }
         else if (getin == 2)
         {
+            system("start DeletingInfo.exe");
+            system("cls");
         }
         else if (getin == 3)
         {
@@ -51,6 +53,8 @@ int main()
         }
         else if (getin == 6)
         {
+            system("start DeletingRecords.exe");
+            system("cls");
         }
         else if (getin == 7)
         {

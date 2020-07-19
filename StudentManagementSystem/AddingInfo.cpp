@@ -40,6 +40,7 @@ void inputcheck(int head, int tail)
              << "校内ID：" << member[i].scid << endl
              << "学籍号：" << member[i].naid << endl
              << endl;
+        member[i].rsum = 0;
         for (int j = 1; j <= head - 1; j++)
         {
             int count = 0;
@@ -53,19 +54,39 @@ void inputcheck(int head, int tail)
                 count += 1;
             if (count >= 2 && count < 4)
             {
+                member[i].rsum = member[j].rsum;
+                for (int k = 1; k <= member[j].rsum; k++)
+                    strcpy(member[i].record[k], member[j].record[k]);
                 member[j] = member[i];
                 tail -= 1;
                 i -= 1;
                 ct += 1;
                 break;
             }
-            else if (count == 4 && strcmp(member[i].ge, member[j].ge) == 0 && strcmp(member[i].bir, member[j].bir) == 0 && strcmp(member[i].intoy, member[j].intoy) == 0)
+            else if (count == 4)
             {
-                member[j] = member[i];
-                tail -= 1;
-                i -= 1;
-                allsame += 1;
-                break;
+                if (strcmp(member[i].ge, member[j].ge) == 0 && strcmp(member[i].bir, member[j].bir) == 0 && strcmp(member[i].intoy, member[j].intoy) == 0)
+                {
+                    member[i].rsum = member[j].rsum;
+                    for (int k = 1; k <= member[j].rsum; k++)
+                        strcpy(member[i].record[k], member[j].record[k]);
+                    member[j] = member[i];
+                    tail -= 1;
+                    i -= 1;
+                    allsame += 1;
+                    break;
+                }
+                else
+                {
+                    member[i].rsum = member[j].rsum;
+                    for (int k = 1; k <= member[j].rsum; k++)
+                        strcpy(member[i].record[k], member[j].record[k]);
+                    member[j] = member[i];
+                    tail -= 1;
+                    i -= 1;
+                    ct += 1;
+                    break;
+                }
             }
         }
     }
@@ -130,7 +151,7 @@ int main()
     if (allsame)
         cout << allsame << "处完全相同";
     if (allsame || ct)
-        cout << "。已使用新数据覆盖。" << endl
+        cout << "。已使用新数据覆盖，但原数据在校记录仍保留。" << endl
              << "如有异议请及时查看。" << endl;
     freopen("CON", "r", stdin);
     system("pause");
