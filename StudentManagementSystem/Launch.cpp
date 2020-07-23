@@ -33,6 +33,8 @@ int main()
         }
         else if (getin == 3)
         {
+            system("start ModifyingInfo.exe");
+            system("cls");
         }
         else if (getin == 4)
         {
@@ -58,6 +60,8 @@ int main()
         }
         else if (getin == 7)
         {
+            system("start ModifyingRecords.exe");
+            system("cls");
         }
         else if (getin == 8)
         {
