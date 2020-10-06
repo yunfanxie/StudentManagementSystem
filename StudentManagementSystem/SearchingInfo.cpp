@@ -22,7 +22,7 @@ int main()
         scanf(" %d", &tail);
         if (tail)
             break;
-        MessageBox(NULL, TEXT("ÔİÎŞÊı¾İ¡£Çë°´ÕÕ¸ñÊ½Â¼ÈëÊı¾İÔÙ½øĞĞ¼ìË÷¡£"), TEXT("´íÎó"), MB_ICONERROR | MB_OK);
+        MessageBox(NULL, TEXT("æš‚æ— æ•°æ®ã€‚è¯·æŒ‰ç…§æ ¼å¼å½•å…¥æ•°æ®å†è¿›è¡Œæ£€ç´¢ã€‚"), TEXT("é”™è¯¯"), MB_ICONERROR | MB_OK);
         return 0;
     }
     for (int i = 1; i <= tail; i++)
@@ -30,20 +30,20 @@ int main()
         cin >> member[i].name >> member[i].ge >> member[i].bir >> member[i].intoy >> member[i].cla >> member[i].clid >> member[i].scid >> member[i].naid;
     }
     freopen("CON ", "r", stdin);
-    cout << "ÇëÊäÈëÒª¼ìË÷ĞÅÏ¢µÄ¹Ø¼ü´ÊµÄĞòºÅ¡£" << endl;
-    cout << "1.ĞÕÃû" << endl
-         << "2.ĞÔ±ğ" << endl
-         << "3.³öÉúÈÕÆÚ" << endl
-         << "4.ÈëÑ§Äê·İ" << endl
-         << "5.°àºÅ" << endl
-         << "6.×ùÎ»ºÅ" << endl
-         << "7.Ğ£ÄÚID" << endl
-         << "8.Ñ§¼®ºÅ" << endl;
+    cout << "è¯·è¾“å…¥è¦æ£€ç´¢ä¿¡æ¯çš„å…³é”®è¯çš„åºå·ã€‚" << endl;
+    cout << "1.å§“å" << endl
+         << "2.æ€§åˆ«" << endl
+         << "3.å‡ºç”Ÿæ—¥æœŸ" << endl
+         << "4.å…¥å­¦å¹´ä»½" << endl
+         << "5.ç­å·" << endl
+         << "6.åº§ä½å·" << endl
+         << "7.æ ¡å†…ID" << endl
+         << "8.å­¦ç±å·" << endl;
     scanf(" %d", &getin);
     freopen("CON", "r", stdin);
     if (getin == 1)
     {
-        cout << "ÇëÊäÈëÒª¼ìË÷µÄĞÕÃû" << endl;
+        cout << "è¯·è¾“å…¥è¦æ£€ç´¢çš„å§“å" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -55,25 +55,25 @@ int main()
         }
         if (number == 0)
         {
-            cout << "±§Ç¸£¡ÎÒÃÇÃ»ÓĞÔÚÊı¾İÖĞÕÒµ½Õâ¸öÈË¡£" << endl;
+            cout << "æŠ±æ­‰ï¼æˆ‘ä»¬æ²¡æœ‰åœ¨æ•°æ®ä¸­æ‰¾åˆ°è¿™ä¸ªäººã€‚" << endl;
             system("pause");
             return 0;
         }
         else
         {
-            cout << "ÎªÄúÕÒµ½" << number << "Ìõ½á¹û" << endl
+            cout << "ä¸ºæ‚¨æ‰¾åˆ°" << number << "æ¡ç»“æœ" << endl
                  << endl;
             for (int j = 1; j <= number; j++)
             {
                 cout << "No." << j << endl
-                     << "ĞÕÃû£º" << member[location[j]].name << endl
-                     << "ĞÔ±ğ£º" << member[location[j]].ge << endl
-                     << "³öÉúÈÕÆÚ£º" << member[location[j]].bir << endl
-                     << "ÈëÑ§Äê·İ£º" << member[location[j]].intoy << endl
-                     << "°àºÅ£º" << member[location[j]].cla << endl
-                     << "×ùÎ»ºÅ£º" << member[location[j]].clid << endl
-                     << "Ğ£ÄÚID£º" << member[location[j]].scid << endl
-                     << "Ñ§¼®ºÅ£º" << member[location[j]].naid << endl
+                     << "å§“åï¼š" << member[location[j]].name << endl
+                     << "æ€§åˆ«ï¼š" << member[location[j]].ge << endl
+                     << "å‡ºç”Ÿæ—¥æœŸï¼š" << member[location[j]].bir << endl
+                     << "å…¥å­¦å¹´ä»½ï¼š" << member[location[j]].intoy << endl
+                     << "ç­å·ï¼š" << member[location[j]].cla << endl
+                     << "åº§ä½å·ï¼š" << member[location[j]].clid << endl
+                     << "æ ¡å†…IDï¼š" << member[location[j]].scid << endl
+                     << "å­¦ç±å·ï¼š" << member[location[j]].naid << endl
                      << endl;
             }
             system("pause");
@@ -82,7 +82,7 @@ int main()
     }
     else if (getin == 2)
     {
-        cout << "ÇëÊäÈëÒª¼ìË÷µÄĞÔ±ğ" << endl;
+        cout << "è¯·è¾“å…¥è¦æ£€ç´¢çš„æ€§åˆ«" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -94,25 +94,25 @@ int main()
         }
         if (number == 0)
         {
-            cout << "±§Ç¸£¡ÎÒÃÇÃ»ÓĞÔÚÊı¾İÖĞÕÒµ½¸ÃĞÔ±ğµÄÈË¡£" << endl;
+            cout << "æŠ±æ­‰ï¼æˆ‘ä»¬æ²¡æœ‰åœ¨æ•°æ®ä¸­æ‰¾åˆ°è¯¥æ€§åˆ«çš„äººã€‚" << endl;
             system("pause");
             return 0;
         }
         else
         {
-            cout << "ÎªÄúÕÒµ½" << number << "Ìõ½á¹û" << endl
+            cout << "ä¸ºæ‚¨æ‰¾åˆ°" << number << "æ¡ç»“æœ" << endl
                  << endl;
             for (int j = 1; j <= number; j++)
             {
                 cout << "No." << j << endl
-                     << "ĞÕÃû£º" << member[location[j]].name << endl
-                     << "ĞÔ±ğ£º" << member[location[j]].ge << endl
-                     << "³öÉúÈÕÆÚ£º" << member[location[j]].bir << endl
-                     << "ÈëÑ§Äê·İ£º" << member[location[j]].intoy << endl
-                     << "°àºÅ£º" << member[location[j]].cla << endl
-                     << "×ùÎ»ºÅ£º" << member[location[j]].clid << endl
-                     << "Ğ£ÄÚID£º" << member[location[j]].scid << endl
-                     << "Ñ§¼®ºÅ£º" << member[location[j]].naid << endl
+                     << "å§“åï¼š" << member[location[j]].name << endl
+                     << "æ€§åˆ«ï¼š" << member[location[j]].ge << endl
+                     << "å‡ºç”Ÿæ—¥æœŸï¼š" << member[location[j]].bir << endl
+                     << "å…¥å­¦å¹´ä»½ï¼š" << member[location[j]].intoy << endl
+                     << "ç­å·ï¼š" << member[location[j]].cla << endl
+                     << "åº§ä½å·ï¼š" << member[location[j]].clid << endl
+                     << "æ ¡å†…IDï¼š" << member[location[j]].scid << endl
+                     << "å­¦ç±å·ï¼š" << member[location[j]].naid << endl
                      << endl;
             }
             system("pause");
@@ -121,7 +121,7 @@ int main()
     }
     else if (getin == 3)
     {
-        cout << "ÇëÊäÈëÒª¼ìË÷µÄ³öÉúÈÕÆÚ" << endl;
+        cout << "è¯·è¾“å…¥è¦æ£€ç´¢çš„å‡ºç”Ÿæ—¥æœŸ" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -133,25 +133,25 @@ int main()
         }
         if (number == 0)
         {
-            cout << "±§Ç¸£¡ÎÒÃÇÃ»ÓĞÔÚÊı¾İÖĞÕÒµ½¸ÃÌì³öÉúµÄÈË¡£" << endl;
+            cout << "æŠ±æ­‰ï¼æˆ‘ä»¬æ²¡æœ‰åœ¨æ•°æ®ä¸­æ‰¾åˆ°è¯¥å¤©å‡ºç”Ÿçš„äººã€‚" << endl;
             system("pause");
             return 0;
         }
         else
         {
-            cout << "ÎªÄúÕÒµ½" << number << "Ìõ½á¹û" << endl
+            cout << "ä¸ºæ‚¨æ‰¾åˆ°" << number << "æ¡ç»“æœ" << endl
                  << endl;
             for (int j = 1; j <= number; j++)
             {
                 cout << "No." << j << endl
-                     << "ĞÕÃû£º" << member[location[j]].name << endl
-                     << "ĞÔ±ğ£º" << member[location[j]].ge << endl
-                     << "³öÉúÈÕÆÚ£º" << member[location[j]].bir << endl
-                     << "ÈëÑ§Äê·İ£º" << member[location[j]].intoy << endl
-                     << "°àºÅ£º" << member[location[j]].cla << endl
-                     << "×ùÎ»ºÅ£º" << member[location[j]].clid << endl
-                     << "Ğ£ÄÚID£º" << member[location[j]].scid << endl
-                     << "Ñ§¼®ºÅ£º" << member[location[j]].naid << endl
+                     << "å§“åï¼š" << member[location[j]].name << endl
+                     << "æ€§åˆ«ï¼š" << member[location[j]].ge << endl
+                     << "å‡ºç”Ÿæ—¥æœŸï¼š" << member[location[j]].bir << endl
+                     << "å…¥å­¦å¹´ä»½ï¼š" << member[location[j]].intoy << endl
+                     << "ç­å·ï¼š" << member[location[j]].cla << endl
+                     << "åº§ä½å·ï¼š" << member[location[j]].clid << endl
+                     << "æ ¡å†…IDï¼š" << member[location[j]].scid << endl
+                     << "å­¦ç±å·ï¼š" << member[location[j]].naid << endl
                      << endl;
             }
             system("pause");
@@ -160,7 +160,7 @@ int main()
     }
     else if (getin == 4)
     {
-        cout << "ÇëÊäÈëÒª¼ìË÷µÄÈëÑ§Äê·İ" << endl;
+        cout << "è¯·è¾“å…¥è¦æ£€ç´¢çš„å…¥å­¦å¹´ä»½" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -172,25 +172,25 @@ int main()
         }
         if (number == 0)
         {
-            cout << "±§Ç¸£¡ÎÒÃÇÃ»ÓĞÔÚÊı¾İÖĞÕÒµ½¸ÃÄêÈëÑ§µÄÈË¡£" << endl;
+            cout << "æŠ±æ­‰ï¼æˆ‘ä»¬æ²¡æœ‰åœ¨æ•°æ®ä¸­æ‰¾åˆ°è¯¥å¹´å…¥å­¦çš„äººã€‚" << endl;
             system("pause");
             return 0;
         }
         else
         {
-            cout << "ÎªÄúÕÒµ½" << number << "Ìõ½á¹û" << endl
+            cout << "ä¸ºæ‚¨æ‰¾åˆ°" << number << "æ¡ç»“æœ" << endl
                  << endl;
             for (int j = 1; j <= number; j++)
             {
                 cout << "No." << j << endl
-                     << "ĞÕÃû£º" << member[location[j]].name << endl
-                     << "ĞÔ±ğ£º" << member[location[j]].ge << endl
-                     << "³öÉúÈÕÆÚ£º" << member[location[j]].bir << endl
-                     << "ÈëÑ§Äê·İ£º" << member[location[j]].intoy << endl
-                     << "°àºÅ£º" << member[location[j]].cla << endl
-                     << "×ùÎ»ºÅ£º" << member[location[j]].clid << endl
-                     << "Ğ£ÄÚID£º" << member[location[j]].scid << endl
-                     << "Ñ§¼®ºÅ£º" << member[location[j]].naid << endl
+                     << "å§“åï¼š" << member[location[j]].name << endl
+                     << "æ€§åˆ«ï¼š" << member[location[j]].ge << endl
+                     << "å‡ºç”Ÿæ—¥æœŸï¼š" << member[location[j]].bir << endl
+                     << "å…¥å­¦å¹´ä»½ï¼š" << member[location[j]].intoy << endl
+                     << "ç­å·ï¼š" << member[location[j]].cla << endl
+                     << "åº§ä½å·ï¼š" << member[location[j]].clid << endl
+                     << "æ ¡å†…IDï¼š" << member[location[j]].scid << endl
+                     << "å­¦ç±å·ï¼š" << member[location[j]].naid << endl
                      << endl;
             }
             system("pause");
@@ -199,7 +199,7 @@ int main()
     }
     else if (getin == 5)
     {
-        cout << "ÇëÊäÈëÒª¼ìË÷µÄ°à¼¶" << endl;
+        cout << "è¯·è¾“å…¥è¦æ£€ç´¢çš„ç­çº§" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -211,25 +211,25 @@ int main()
         }
         if (number == 0)
         {
-            cout << "±§Ç¸£¡ÎÒÃÇÃ»ÓĞÔÚÊı¾İÖĞÕÒµ½¸Ã°à¼¶µÄÈË¡£" << endl;
+            cout << "æŠ±æ­‰ï¼æˆ‘ä»¬æ²¡æœ‰åœ¨æ•°æ®ä¸­æ‰¾åˆ°è¯¥ç­çº§çš„äººã€‚" << endl;
             system("pause");
             return 0;
         }
         else
         {
-            cout << "ÎªÄúÕÒµ½" << number << "Ìõ½á¹û" << endl
+            cout << "ä¸ºæ‚¨æ‰¾åˆ°" << number << "æ¡ç»“æœ" << endl
                  << endl;
             for (int j = 1; j <= number; j++)
             {
                 cout << "No." << j << endl
-                     << "ĞÕÃû£º" << member[location[j]].name << endl
-                     << "ĞÔ±ğ£º" << member[location[j]].ge << endl
-                     << "³öÉúÈÕÆÚ£º" << member[location[j]].bir << endl
-                     << "ÈëÑ§Äê·İ£º" << member[location[j]].intoy << endl
-                     << "°àºÅ£º" << member[location[j]].cla << endl
-                     << "×ùÎ»ºÅ£º" << member[location[j]].clid << endl
-                     << "Ğ£ÄÚID£º" << member[location[j]].scid << endl
-                     << "Ñ§¼®ºÅ£º" << member[location[j]].naid << endl
+                     << "å§“åï¼š" << member[location[j]].name << endl
+                     << "æ€§åˆ«ï¼š" << member[location[j]].ge << endl
+                     << "å‡ºç”Ÿæ—¥æœŸï¼š" << member[location[j]].bir << endl
+                     << "å…¥å­¦å¹´ä»½ï¼š" << member[location[j]].intoy << endl
+                     << "ç­å·ï¼š" << member[location[j]].cla << endl
+                     << "åº§ä½å·ï¼š" << member[location[j]].clid << endl
+                     << "æ ¡å†…IDï¼š" << member[location[j]].scid << endl
+                     << "å­¦ç±å·ï¼š" << member[location[j]].naid << endl
                      << endl;
             }
             system("pause");
@@ -238,7 +238,7 @@ int main()
     }
     else if (getin == 6)
     {
-        cout << "ÇëÊäÈëÒª¼ìË÷µÄ×ùÎ»ºÅ" << endl;
+        cout << "è¯·è¾“å…¥è¦æ£€ç´¢çš„åº§ä½å·" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -250,25 +250,25 @@ int main()
         }
         if (number == 0)
         {
-            cout << "±§Ç¸£¡ÎÒÃÇÃ»ÓĞÔÚÊı¾İÖĞÕÒµ½¸Ã×ùÎ»ºÅµÄÈË¡£" << endl;
+            cout << "æŠ±æ­‰ï¼æˆ‘ä»¬æ²¡æœ‰åœ¨æ•°æ®ä¸­æ‰¾åˆ°è¯¥åº§ä½å·çš„äººã€‚" << endl;
             system("pause");
             return 0;
         }
         else
         {
-            cout << "ÎªÄúÕÒµ½" << number << "Ìõ½á¹û" << endl
+            cout << "ä¸ºæ‚¨æ‰¾åˆ°" << number << "æ¡ç»“æœ" << endl
                  << endl;
             for (int j = 1; j <= number; j++)
             {
                 cout << "No." << j << endl
-                     << "ĞÕÃû£º" << member[location[j]].name << endl
-                     << "ĞÔ±ğ£º" << member[location[j]].ge << endl
-                     << "³öÉúÈÕÆÚ£º" << member[location[j]].bir << endl
-                     << "ÈëÑ§Äê·İ£º" << member[location[j]].intoy << endl
-                     << "°àºÅ£º" << member[location[j]].cla << endl
-                     << "×ùÎ»ºÅ£º" << member[location[j]].clid << endl
-                     << "Ğ£ÄÚID£º" << member[location[j]].scid << endl
-                     << "Ñ§¼®ºÅ£º" << member[location[j]].naid << endl
+                     << "å§“åï¼š" << member[location[j]].name << endl
+                     << "æ€§åˆ«ï¼š" << member[location[j]].ge << endl
+                     << "å‡ºç”Ÿæ—¥æœŸï¼š" << member[location[j]].bir << endl
+                     << "å…¥å­¦å¹´ä»½ï¼š" << member[location[j]].intoy << endl
+                     << "ç­å·ï¼š" << member[location[j]].cla << endl
+                     << "åº§ä½å·ï¼š" << member[location[j]].clid << endl
+                     << "æ ¡å†…IDï¼š" << member[location[j]].scid << endl
+                     << "å­¦ç±å·ï¼š" << member[location[j]].naid << endl
                      << endl;
             }
             system("pause");
@@ -277,7 +277,7 @@ int main()
     }
     else if (getin == 7)
     {
-        cout << "ÇëÊäÈëÒª¼ìË÷µÄĞ£ÄÚID" << endl;
+        cout << "è¯·è¾“å…¥è¦æ£€ç´¢çš„æ ¡å†…ID" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -289,25 +289,25 @@ int main()
         }
         if (number == 0)
         {
-            cout << "±§Ç¸£¡ÎÒÃÇÃ»ÓĞÔÚÊı¾İÖĞÕÒµ½ÓµÓĞ¸ÃĞ£ÄÚIDµÄÈË¡£" << endl;
+            cout << "æŠ±æ­‰ï¼æˆ‘ä»¬æ²¡æœ‰åœ¨æ•°æ®ä¸­æ‰¾åˆ°æ‹¥æœ‰è¯¥æ ¡å†…IDçš„äººã€‚" << endl;
             system("pause");
             return 0;
         }
         else
         {
-            cout << "ÎªÄúÕÒµ½" << number << "Ìõ½á¹û" << endl
+            cout << "ä¸ºæ‚¨æ‰¾åˆ°" << number << "æ¡ç»“æœ" << endl
                  << endl;
             for (int j = 1; j <= number; j++)
             {
                 cout << "No." << j << endl
-                     << "ĞÕÃû£º" << member[location[j]].name << endl
-                     << "ĞÔ±ğ£º" << member[location[j]].ge << endl
-                     << "³öÉúÈÕÆÚ£º" << member[location[j]].bir << endl
-                     << "ÈëÑ§Äê·İ£º" << member[location[j]].intoy << endl
-                     << "°àºÅ£º" << member[location[j]].cla << endl
-                     << "×ùÎ»ºÅ£º" << member[location[j]].clid << endl
-                     << "Ğ£ÄÚID£º" << member[location[j]].scid << endl
-                     << "Ñ§¼®ºÅ£º" << member[location[j]].naid << endl
+                     << "å§“åï¼š" << member[location[j]].name << endl
+                     << "æ€§åˆ«ï¼š" << member[location[j]].ge << endl
+                     << "å‡ºç”Ÿæ—¥æœŸï¼š" << member[location[j]].bir << endl
+                     << "å…¥å­¦å¹´ä»½ï¼š" << member[location[j]].intoy << endl
+                     << "ç­å·ï¼š" << member[location[j]].cla << endl
+                     << "åº§ä½å·ï¼š" << member[location[j]].clid << endl
+                     << "æ ¡å†…IDï¼š" << member[location[j]].scid << endl
+                     << "å­¦ç±å·ï¼š" << member[location[j]].naid << endl
                      << endl;
             }
             system("pause");
@@ -316,7 +316,7 @@ int main()
     }
     else if (getin == 8)
     {
-        cout << "ÇëÊäÈëÒª¼ìË÷µÄÑ§¼®ºÅ" << endl;
+        cout << "è¯·è¾“å…¥è¦æ£€ç´¢çš„å­¦ç±å·" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -328,25 +328,25 @@ int main()
         }
         if (number == 0)
         {
-            cout << "±§Ç¸£¡ÎÒÃÇÃ»ÓĞÔÚÊı¾İÖĞÕÒµ½ÓµÓĞ¸ÃÑ§¼®ºÅµÄÈË¡£" << endl;
+            cout << "æŠ±æ­‰ï¼æˆ‘ä»¬æ²¡æœ‰åœ¨æ•°æ®ä¸­æ‰¾åˆ°æ‹¥æœ‰è¯¥å­¦ç±å·çš„äººã€‚" << endl;
             system("pause");
             return 0;
         }
         else
         {
-            cout << "ÎªÄúÕÒµ½" << number << "Ìõ½á¹û" << endl
+            cout << "ä¸ºæ‚¨æ‰¾åˆ°" << number << "æ¡ç»“æœ" << endl
                  << endl;
             for (int j = 1; j <= number; j++)
             {
                 cout << "No." << j << endl
-                     << "ĞÕÃû£º" << member[location[j]].name << endl
-                     << "ĞÔ±ğ£º" << member[location[j]].ge << endl
-                     << "³öÉúÈÕÆÚ£º" << member[location[j]].bir << endl
-                     << "ÈëÑ§Äê·İ£º" << member[location[j]].intoy << endl
-                     << "°àºÅ£º" << member[location[j]].cla << endl
-                     << "×ùÎ»ºÅ£º" << member[location[j]].clid << endl
-                     << "Ğ£ÄÚID£º" << member[location[j]].scid << endl
-                     << "Ñ§¼®ºÅ£º" << member[location[j]].naid << endl
+                     << "å§“åï¼š" << member[location[j]].name << endl
+                     << "æ€§åˆ«ï¼š" << member[location[j]].ge << endl
+                     << "å‡ºç”Ÿæ—¥æœŸï¼š" << member[location[j]].bir << endl
+                     << "å…¥å­¦å¹´ä»½ï¼š" << member[location[j]].intoy << endl
+                     << "ç­å·ï¼š" << member[location[j]].cla << endl
+                     << "åº§ä½å·ï¼š" << member[location[j]].clid << endl
+                     << "æ ¡å†…IDï¼š" << member[location[j]].scid << endl
+                     << "å­¦ç±å·ï¼š" << member[location[j]].naid << endl
                      << endl;
             }
             system("pause");

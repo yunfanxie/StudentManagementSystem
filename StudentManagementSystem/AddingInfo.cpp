@@ -31,14 +31,14 @@ void inputcheck(int head, int tail)
         ls += 1;
         cin >> member[i].name >> member[i].ge >> member[i].bir >> member[i].intoy >> member[i].cla >> member[i].clid >> member[i].scid >> member[i].naid;
         cout << "No." << ls << endl
-             << "ĞÕÃû£º" << member[i].name << endl
-             << "ĞÔ±ğ£º" << member[i].ge << endl
-             << "³öÉúÈÕÆÚ£º" << member[i].bir << endl
-             << "ÈëÑ§Äê·İ£º" << member[i].intoy << endl
-             << "°àºÅ£º" << member[i].cla << endl
-             << "×ùÎ»ºÅ£º" << member[i].clid << endl
-             << "Ğ£ÄÚID£º" << member[i].scid << endl
-             << "Ñ§¼®ºÅ£º" << member[i].naid << endl
+             << "å§“åï¼š" << member[i].name << endl
+             << "æ€§åˆ«ï¼š" << member[i].ge << endl
+             << "å‡ºç”Ÿæ—¥æœŸï¼š" << member[i].bir << endl
+             << "å…¥å­¦å¹´ä»½ï¼š" << member[i].intoy << endl
+             << "ç­å·ï¼š" << member[i].cla << endl
+             << "åº§ä½å·ï¼š" << member[i].clid << endl
+             << "æ ¡å†…IDï¼š" << member[i].scid << endl
+             << "å­¦ç±å·ï¼š" << member[i].naid << endl
              << endl;
         member[i].rsum = 0;
         for (int j = 1; j <= head - 1; j++)
@@ -114,7 +114,7 @@ int main()
         scanf(" %d", &sum);
         if (sum)
             break;
-        MessageBox(NULL, TEXT("Çë°´ÕÕ¸ñÊ½ÔÚStudentManagementSystem/Data/AddInPut.txtÄÚÌî³äÊı¾İºóµ¥»÷È·¶¨¡£"), TEXT("´íÎó"), MB_ICONERROR | MB_OK);
+        MessageBox(NULL, TEXT("è¯·æŒ‰ç…§æ ¼å¼åœ¨StudentManagementSystem/Data/AddInPut.txtå†…å¡«å……æ•°æ®åå•å‡»ç¡®å®šã€‚"), TEXT("é”™è¯¯"), MB_ICONERROR | MB_OK);
     }
     int taile = sum + start - 1;
     inputcheck(start, taile);
@@ -141,18 +141,18 @@ int main()
             cout << member[i].record[j] << endl;
     }
     freopen("CON", "w", stdout);
-    cout << "Êı¾İÂ¼ÈëÍê³É¡£" << endl;
+    cout << "æ•°æ®å½•å…¥å®Œæˆã€‚" << endl;
     if (allsame || ct)
-        cout << "ÓëÒÑÂ¼ÈëÊı¾İÓĞ";
+        cout << "ä¸å·²å½•å…¥æ•°æ®æœ‰";
     if (ct)
-        cout << ct << "´¦³åÍ»";
+        cout << ct << "å¤„å†²çª";
     if (allsame && ct)
         cout << ",";
     if (allsame)
-        cout << allsame << "´¦ÍêÈ«ÏàÍ¬";
+        cout << allsame << "å¤„å®Œå…¨ç›¸åŒ";
     if (allsame || ct)
-        cout << "¡£ÒÑÊ¹ÓÃĞÂÊı¾İ¸²¸Ç£¬µ«Ô­Êı¾İÔÚĞ£¼ÇÂ¼ÈÔ±£Áô¡£" << endl
-             << "ÈçÓĞÒìÒéÇë¼°Ê±²é¿´¡£" << endl;
+        cout << "ã€‚å·²ä½¿ç”¨æ–°æ•°æ®è¦†ç›–ï¼Œä½†åŸæ•°æ®åœ¨æ ¡è®°å½•ä»ä¿ç•™ã€‚" << endl
+             << "å¦‚æœ‰å¼‚è®®è¯·åŠæ—¶æŸ¥çœ‹ã€‚" << endl;
     freopen("CON", "r", stdin);
     system("pause");
     return 0;

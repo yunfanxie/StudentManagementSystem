@@ -43,7 +43,7 @@ int main()
         scanf(" %d", &tail);
         if (tail)
             break;
-        MessageBox(NULL, TEXT("‘›Œﬁ ˝æ›°£«Î∞¥’’∏Ò Ω¬º»Î ˝æ›‘ŸΩ¯––…æ≥˝°£"), TEXT("¥ÌŒÛ"), MB_ICONERROR | MB_OK);
+        MessageBox(NULL, TEXT("ÊöÇÊó†Êï∞ÊçÆ„ÄÇËØ∑ÊåâÁÖßÊ†ºÂºèÂΩïÂÖ•Êï∞ÊçÆÂÜçËøõË°åÂà†Èô§„ÄÇ"), TEXT("ÈîôËØØ"), MB_ICONERROR | MB_OK);
         return 0;
     }
     for (int i = 1; i <= tail; i++)
@@ -59,20 +59,20 @@ int main()
             cin >> member[i].record[j];
     }
     freopen("CON ", "r", stdin);
-    cout << "«Î ‰»Î“™…æ≥˝º«¬ºµƒ—ß…˙µƒ–≈œ¢πÿº¸¥ µƒ–Ú∫≈°£" << endl;
-    cout << "1.–’√˚" << endl
-         << "2.–‘±" << endl
-         << "3.≥ˆ…˙»’∆⁄" << endl
-         << "4.»Î—ßƒÍ∑›" << endl
-         << "5.∞‡∫≈" << endl
-         << "6.◊˘Œª∫≈" << endl
-         << "7.–£ƒ⁄ID" << endl
-         << "8.—ßºÆ∫≈" << endl;
+    cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ËÆ∞ÂΩïÁöÑÂ≠¶ÁîüÁöÑ‰ø°ÊÅØÂÖ≥ÈîÆËØçÁöÑÂ∫èÂè∑„ÄÇ" << endl;
+    cout << "1.ÂßìÂêç" << endl
+         << "2.ÊÄßÂà´" << endl
+         << "3.Âá∫ÁîüÊó•Êúü" << endl
+         << "4.ÂÖ•Â≠¶Âπ¥‰ªΩ" << endl
+         << "5.Áè≠Âè∑" << endl
+         << "6.Â∫ß‰ΩçÂè∑" << endl
+         << "7.Ê†°ÂÜÖID" << endl
+         << "8.Â≠¶Á±çÂè∑" << endl;
     scanf(" %d", &getin);
     freopen("CON", "r", stdin);
     if (getin == 1)
     {
-        cout << "«Î ‰»Î“™…æ≥˝º«¬ºµƒ—ß…˙µƒ–’√˚" << endl;
+        cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ËÆ∞ÂΩïÁöÑÂ≠¶ÁîüÁöÑÂßìÂêç" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -84,21 +84,21 @@ int main()
         }
         if (number == 0)
         {
-            cout << "±ß«∏£°Œ“√«√ª”–‘⁄ ˝æ›÷–’“µΩ’‚∏ˆ»À°£" << endl;
+            cout << "Êä±Ê≠âÔºÅÊàë‰ª¨Ê≤°ÊúâÂú®Êï∞ÊçÆ‰∏≠ÊâæÂà∞Ëøô‰∏™‰∫∫„ÄÇ" << endl;
             system("pause");
             return 0;
         }
         else if (number == 1)
         {
             cout << endl
-                 << "–’√˚£∫" << member[location[1]].name << endl
-                 << "–‘±£∫" << member[location[1]].ge << endl
-                 << "≥ˆ…˙»’∆⁄£∫" << member[location[1]].bir << endl
-                 << "»Î—ßƒÍ∑›£∫" << member[location[1]].intoy << endl
-                 << "∞‡∫≈£∫" << member[location[1]].cla << endl
-                 << "◊˘Œª∫≈£∫" << member[location[1]].clid << endl
-                 << "–£ƒ⁄ID£∫" << member[location[1]].scid << endl
-                 << "—ßºÆ∫≈£∫" << member[location[1]].naid << endl
+                 << "ÂßìÂêçÔºö" << member[location[1]].name << endl
+                 << "ÊÄßÂà´Ôºö" << member[location[1]].ge << endl
+                 << "Âá∫ÁîüÊó•ÊúüÔºö" << member[location[1]].bir << endl
+                 << "ÂÖ•Â≠¶Âπ¥‰ªΩÔºö" << member[location[1]].intoy << endl
+                 << "Áè≠Âè∑Ôºö" << member[location[1]].cla << endl
+                 << "Â∫ß‰ΩçÂè∑Ôºö" << member[location[1]].clid << endl
+                 << "Ê†°ÂÜÖIDÔºö" << member[location[1]].scid << endl
+                 << "Â≠¶Á±çÂè∑Ôºö" << member[location[1]].naid << endl
                  << endl;
             for (int j = 1; j <= member[location[1]].rsum; j++)
             {
@@ -106,41 +106,41 @@ int main()
                 cout << member[location[1]].record[j] << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝µƒº«¬ºµƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ÁöÑËÆ∞ÂΩïÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &gin);
             while (1)
             {
-                cout << "»∑»œ…æ≥˝«Î ‰»Î°∞yes°±°£" << endl;
+                cout << "Á°ÆËÆ§Âà†Èô§ËØ∑ËæìÂÖ•‚Äúyes‚Äù„ÄÇ" << endl;
                 cin >> in;
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteRecords(location[1], gin);
-                    cout << "…æ≥˝≥…π¶£°" << endl;
+                    cout << "Âà†Èô§ÊàêÂäüÔºÅ" << endl;
                     break;
                 }
-                cout << " ‰»Î¥ÌŒÛ£°";
+                cout << "ËæìÂÖ•ÈîôËØØÔºÅ";
             }
             system("pause");
             return 0;
         }
         else
         {
-            cout << "Œ™ƒ˙’“µΩ" << number << "ÃıΩ·π˚" << endl
+            cout << "‰∏∫ÊÇ®ÊâæÂà∞" << number << "Êù°ÁªìÊûú" << endl
                  << endl;
             for (int j = 1; j <= number; j++)
             {
                 cout << "No." << j << endl
-                     << "–’√˚£∫" << member[location[j]].name << endl
-                     << "–‘±£∫" << member[location[j]].ge << endl
-                     << "≥ˆ…˙»’∆⁄£∫" << member[location[j]].bir << endl
-                     << "»Î—ßƒÍ∑›£∫" << member[location[j]].intoy << endl
-                     << "∞‡∫≈£∫" << member[location[j]].cla << endl
-                     << "◊˘Œª∫≈£∫" << member[location[j]].clid << endl
-                     << "–£ƒ⁄ID£∫" << member[location[j]].scid << endl
-                     << "—ßºÆ∫≈£∫" << member[location[j]].naid << endl
+                     << "ÂßìÂêçÔºö" << member[location[j]].name << endl
+                     << "ÊÄßÂà´Ôºö" << member[location[j]].ge << endl
+                     << "Âá∫ÁîüÊó•ÊúüÔºö" << member[location[j]].bir << endl
+                     << "ÂÖ•Â≠¶Âπ¥‰ªΩÔºö" << member[location[j]].intoy << endl
+                     << "Áè≠Âè∑Ôºö" << member[location[j]].cla << endl
+                     << "Â∫ß‰ΩçÂè∑Ôºö" << member[location[j]].clid << endl
+                     << "Ê†°ÂÜÖIDÔºö" << member[location[j]].scid << endl
+                     << "Â≠¶Á±çÂè∑Ôºö" << member[location[j]].naid << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝º«¬ºµƒ—ß…˙µƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ËÆ∞ÂΩïÁöÑÂ≠¶ÁîüÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &getin);
             for (int j = 1; j <= member[location[getin]].rsum; j++)
             {
@@ -148,19 +148,19 @@ int main()
                 cout << member[location[getin]].record[j] << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝µƒº«¬ºµƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ÁöÑËÆ∞ÂΩïÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &gin);
             while (1)
             {
-                cout << "»∑»œ…æ≥˝«Î ‰»Î°∞yes°±°£" << endl;
+                cout << "Á°ÆËÆ§Âà†Èô§ËØ∑ËæìÂÖ•‚Äúyes‚Äù„ÄÇ" << endl;
                 cin >> in;
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteRecords(location[getin], gin);
-                    cout << "…æ≥˝≥…π¶£°" << endl;
+                    cout << "Âà†Èô§ÊàêÂäüÔºÅ" << endl;
                     break;
                 }
-                cout << " ‰»Î¥ÌŒÛ£°";
+                cout << "ËæìÂÖ•ÈîôËØØÔºÅ";
             }
             system("pause");
             return 0;
@@ -168,7 +168,7 @@ int main()
     }
     else if (getin == 2)
     {
-        cout << "«Î ‰»Î“™…æ≥˝º«¬ºµƒ—ß…˙µƒ–‘±" << endl;
+        cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ËÆ∞ÂΩïÁöÑÂ≠¶ÁîüÁöÑÊÄßÂà´" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -180,21 +180,21 @@ int main()
         }
         if (number == 0)
         {
-            cout << "±ß«∏£°Œ“√«√ª”–‘⁄ ˝æ›÷–’“µΩ∏√–‘±µƒ»À°£" << endl;
+            cout << "Êä±Ê≠âÔºÅÊàë‰ª¨Ê≤°ÊúâÂú®Êï∞ÊçÆ‰∏≠ÊâæÂà∞ËØ•ÊÄßÂà´ÁöÑ‰∫∫„ÄÇ" << endl;
             system("pause");
             return 0;
         }
         else if (number == 1)
         {
             cout << endl
-                 << "–’√˚£∫" << member[location[1]].name << endl
-                 << "–‘±£∫" << member[location[1]].ge << endl
-                 << "≥ˆ…˙»’∆⁄£∫" << member[location[1]].bir << endl
-                 << "»Î—ßƒÍ∑›£∫" << member[location[1]].intoy << endl
-                 << "∞‡∫≈£∫" << member[location[1]].cla << endl
-                 << "◊˘Œª∫≈£∫" << member[location[1]].clid << endl
-                 << "–£ƒ⁄ID£∫" << member[location[1]].scid << endl
-                 << "—ßºÆ∫≈£∫" << member[location[1]].naid << endl
+                 << "ÂßìÂêçÔºö" << member[location[1]].name << endl
+                 << "ÊÄßÂà´Ôºö" << member[location[1]].ge << endl
+                 << "Âá∫ÁîüÊó•ÊúüÔºö" << member[location[1]].bir << endl
+                 << "ÂÖ•Â≠¶Âπ¥‰ªΩÔºö" << member[location[1]].intoy << endl
+                 << "Áè≠Âè∑Ôºö" << member[location[1]].cla << endl
+                 << "Â∫ß‰ΩçÂè∑Ôºö" << member[location[1]].clid << endl
+                 << "Ê†°ÂÜÖIDÔºö" << member[location[1]].scid << endl
+                 << "Â≠¶Á±çÂè∑Ôºö" << member[location[1]].naid << endl
                  << endl;
             for (int j = 1; j <= member[location[1]].rsum; j++)
             {
@@ -202,41 +202,41 @@ int main()
                 cout << member[location[1]].record[j] << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝µƒº«¬ºµƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ÁöÑËÆ∞ÂΩïÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &gin);
             while (1)
             {
-                cout << "»∑»œ…æ≥˝«Î ‰»Î°∞yes°±°£" << endl;
+                cout << "Á°ÆËÆ§Âà†Èô§ËØ∑ËæìÂÖ•‚Äúyes‚Äù„ÄÇ" << endl;
                 cin >> in;
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteRecords(location[1], gin);
-                    cout << "…æ≥˝≥…π¶£°" << endl;
+                    cout << "Âà†Èô§ÊàêÂäüÔºÅ" << endl;
                     break;
                 }
-                cout << " ‰»Î¥ÌŒÛ£°";
+                cout << "ËæìÂÖ•ÈîôËØØÔºÅ";
             }
             system("pause");
             return 0;
         }
         else
         {
-            cout << "Œ™ƒ˙’“µΩ" << number << "ÃıΩ·π˚" << endl
+            cout << "‰∏∫ÊÇ®ÊâæÂà∞" << number << "Êù°ÁªìÊûú" << endl
                  << endl;
             for (int j = 1; j <= number; j++)
             {
                 cout << "No." << j << endl
-                     << "–’√˚£∫" << member[location[j]].name << endl
-                     << "–‘±£∫" << member[location[j]].ge << endl
-                     << "≥ˆ…˙»’∆⁄£∫" << member[location[j]].bir << endl
-                     << "»Î—ßƒÍ∑›£∫" << member[location[j]].intoy << endl
-                     << "∞‡∫≈£∫" << member[location[j]].cla << endl
-                     << "◊˘Œª∫≈£∫" << member[location[j]].clid << endl
-                     << "–£ƒ⁄ID£∫" << member[location[j]].scid << endl
-                     << "—ßºÆ∫≈£∫" << member[location[j]].naid << endl
+                     << "ÂßìÂêçÔºö" << member[location[j]].name << endl
+                     << "ÊÄßÂà´Ôºö" << member[location[j]].ge << endl
+                     << "Âá∫ÁîüÊó•ÊúüÔºö" << member[location[j]].bir << endl
+                     << "ÂÖ•Â≠¶Âπ¥‰ªΩÔºö" << member[location[j]].intoy << endl
+                     << "Áè≠Âè∑Ôºö" << member[location[j]].cla << endl
+                     << "Â∫ß‰ΩçÂè∑Ôºö" << member[location[j]].clid << endl
+                     << "Ê†°ÂÜÖIDÔºö" << member[location[j]].scid << endl
+                     << "Â≠¶Á±çÂè∑Ôºö" << member[location[j]].naid << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝º«¬ºµƒ—ß…˙µƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ËÆ∞ÂΩïÁöÑÂ≠¶ÁîüÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &getin);
             for (int j = 1; j <= member[location[getin]].rsum; j++)
             {
@@ -244,19 +244,19 @@ int main()
                 cout << member[location[getin]].record[j] << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝µƒº«¬ºµƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ÁöÑËÆ∞ÂΩïÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &gin);
             while (1)
             {
-                cout << "»∑»œ…æ≥˝«Î ‰»Î°∞yes°±°£" << endl;
+                cout << "Á°ÆËÆ§Âà†Èô§ËØ∑ËæìÂÖ•‚Äúyes‚Äù„ÄÇ" << endl;
                 cin >> in;
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteRecords(location[getin], gin);
-                    cout << "…æ≥˝≥…π¶£°" << endl;
+                    cout << "Âà†Èô§ÊàêÂäüÔºÅ" << endl;
                     break;
                 }
-                cout << " ‰»Î¥ÌŒÛ£°";
+                cout << "ËæìÂÖ•ÈîôËØØÔºÅ";
             }
             system("pause");
             return 0;
@@ -264,7 +264,7 @@ int main()
     }
     else if (getin == 3)
     {
-        cout << "«Î ‰»Î“™…æ≥˝º«¬ºµƒ—ß…˙µƒ≥ˆ…˙»’∆⁄" << endl;
+        cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ËÆ∞ÂΩïÁöÑÂ≠¶ÁîüÁöÑÂá∫ÁîüÊó•Êúü" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -276,21 +276,21 @@ int main()
         }
         if (number == 0)
         {
-            cout << "±ß«∏£°Œ“√«√ª”–‘⁄ ˝æ›÷–’“µΩ∏√ÃÏ≥ˆ…˙µƒ»À°£" << endl;
+            cout << "Êä±Ê≠âÔºÅÊàë‰ª¨Ê≤°ÊúâÂú®Êï∞ÊçÆ‰∏≠ÊâæÂà∞ËØ•Â§©Âá∫ÁîüÁöÑ‰∫∫„ÄÇ" << endl;
             system("pause");
             return 0;
         }
         else if (number == 1)
         {
             cout << endl
-                 << "–’√˚£∫" << member[location[1]].name << endl
-                 << "–‘±£∫" << member[location[1]].ge << endl
-                 << "≥ˆ…˙»’∆⁄£∫" << member[location[1]].bir << endl
-                 << "»Î—ßƒÍ∑›£∫" << member[location[1]].intoy << endl
-                 << "∞‡∫≈£∫" << member[location[1]].cla << endl
-                 << "◊˘Œª∫≈£∫" << member[location[1]].clid << endl
-                 << "–£ƒ⁄ID£∫" << member[location[1]].scid << endl
-                 << "—ßºÆ∫≈£∫" << member[location[1]].naid << endl
+                 << "ÂßìÂêçÔºö" << member[location[1]].name << endl
+                 << "ÊÄßÂà´Ôºö" << member[location[1]].ge << endl
+                 << "Âá∫ÁîüÊó•ÊúüÔºö" << member[location[1]].bir << endl
+                 << "ÂÖ•Â≠¶Âπ¥‰ªΩÔºö" << member[location[1]].intoy << endl
+                 << "Áè≠Âè∑Ôºö" << member[location[1]].cla << endl
+                 << "Â∫ß‰ΩçÂè∑Ôºö" << member[location[1]].clid << endl
+                 << "Ê†°ÂÜÖIDÔºö" << member[location[1]].scid << endl
+                 << "Â≠¶Á±çÂè∑Ôºö" << member[location[1]].naid << endl
                  << endl;
             for (int j = 1; j <= member[location[1]].rsum; j++)
             {
@@ -298,41 +298,41 @@ int main()
                 cout << member[location[1]].record[j] << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝µƒº«¬ºµƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ÁöÑËÆ∞ÂΩïÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &gin);
             while (1)
             {
-                cout << "»∑»œ…æ≥˝«Î ‰»Î°∞yes°±°£" << endl;
+                cout << "Á°ÆËÆ§Âà†Èô§ËØ∑ËæìÂÖ•‚Äúyes‚Äù„ÄÇ" << endl;
                 cin >> in;
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteRecords(location[1], gin);
-                    cout << "…æ≥˝≥…π¶£°" << endl;
+                    cout << "Âà†Èô§ÊàêÂäüÔºÅ" << endl;
                     break;
                 }
-                cout << " ‰»Î¥ÌŒÛ£°";
+                cout << "ËæìÂÖ•ÈîôËØØÔºÅ";
             }
             system("pause");
             return 0;
         }
         else
         {
-            cout << "Œ™ƒ˙’“µΩ" << number << "ÃıΩ·π˚" << endl
+            cout << "‰∏∫ÊÇ®ÊâæÂà∞" << number << "Êù°ÁªìÊûú" << endl
                  << endl;
             for (int j = 1; j <= number; j++)
             {
                 cout << "No." << j << endl
-                     << "–’√˚£∫" << member[location[j]].name << endl
-                     << "–‘±£∫" << member[location[j]].ge << endl
-                     << "≥ˆ…˙»’∆⁄£∫" << member[location[j]].bir << endl
-                     << "»Î—ßƒÍ∑›£∫" << member[location[j]].intoy << endl
-                     << "∞‡∫≈£∫" << member[location[j]].cla << endl
-                     << "◊˘Œª∫≈£∫" << member[location[j]].clid << endl
-                     << "–£ƒ⁄ID£∫" << member[location[j]].scid << endl
-                     << "—ßºÆ∫≈£∫" << member[location[j]].naid << endl
+                     << "ÂßìÂêçÔºö" << member[location[j]].name << endl
+                     << "ÊÄßÂà´Ôºö" << member[location[j]].ge << endl
+                     << "Âá∫ÁîüÊó•ÊúüÔºö" << member[location[j]].bir << endl
+                     << "ÂÖ•Â≠¶Âπ¥‰ªΩÔºö" << member[location[j]].intoy << endl
+                     << "Áè≠Âè∑Ôºö" << member[location[j]].cla << endl
+                     << "Â∫ß‰ΩçÂè∑Ôºö" << member[location[j]].clid << endl
+                     << "Ê†°ÂÜÖIDÔºö" << member[location[j]].scid << endl
+                     << "Â≠¶Á±çÂè∑Ôºö" << member[location[j]].naid << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝º«¬ºµƒ—ß…˙µƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ËÆ∞ÂΩïÁöÑÂ≠¶ÁîüÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &getin);
             for (int j = 1; j <= member[location[getin]].rsum; j++)
             {
@@ -340,19 +340,19 @@ int main()
                 cout << member[location[getin]].record[j] << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝µƒº«¬ºµƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ÁöÑËÆ∞ÂΩïÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &gin);
             while (1)
             {
-                cout << "»∑»œ…æ≥˝«Î ‰»Î°∞yes°±°£" << endl;
+                cout << "Á°ÆËÆ§Âà†Èô§ËØ∑ËæìÂÖ•‚Äúyes‚Äù„ÄÇ" << endl;
                 cin >> in;
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteRecords(location[getin], gin);
-                    cout << "…æ≥˝≥…π¶£°" << endl;
+                    cout << "Âà†Èô§ÊàêÂäüÔºÅ" << endl;
                     break;
                 }
-                cout << " ‰»Î¥ÌŒÛ£°";
+                cout << "ËæìÂÖ•ÈîôËØØÔºÅ";
             }
             system("pause");
             return 0;
@@ -360,7 +360,7 @@ int main()
     }
     else if (getin == 4)
     {
-        cout << "«Î ‰»Î“™…æ≥˝º«¬ºµƒ—ß…˙µƒ»Î—ßƒÍ∑›" << endl;
+        cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ËÆ∞ÂΩïÁöÑÂ≠¶ÁîüÁöÑÂÖ•Â≠¶Âπ¥‰ªΩ" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -372,21 +372,21 @@ int main()
         }
         if (number == 0)
         {
-            cout << "±ß«∏£°Œ“√«√ª”–‘⁄ ˝æ›÷–’“µΩ∏√ƒÍ»Î—ßµƒ»À°£" << endl;
+            cout << "Êä±Ê≠âÔºÅÊàë‰ª¨Ê≤°ÊúâÂú®Êï∞ÊçÆ‰∏≠ÊâæÂà∞ËØ•Âπ¥ÂÖ•Â≠¶ÁöÑ‰∫∫„ÄÇ" << endl;
             system("pause");
             return 0;
         }
         else if (number == 1)
         {
             cout << endl
-                 << "–’√˚£∫" << member[location[1]].name << endl
-                 << "–‘±£∫" << member[location[1]].ge << endl
-                 << "≥ˆ…˙»’∆⁄£∫" << member[location[1]].bir << endl
-                 << "»Î—ßƒÍ∑›£∫" << member[location[1]].intoy << endl
-                 << "∞‡∫≈£∫" << member[location[1]].cla << endl
-                 << "◊˘Œª∫≈£∫" << member[location[1]].clid << endl
-                 << "–£ƒ⁄ID£∫" << member[location[1]].scid << endl
-                 << "—ßºÆ∫≈£∫" << member[location[1]].naid << endl
+                 << "ÂßìÂêçÔºö" << member[location[1]].name << endl
+                 << "ÊÄßÂà´Ôºö" << member[location[1]].ge << endl
+                 << "Âá∫ÁîüÊó•ÊúüÔºö" << member[location[1]].bir << endl
+                 << "ÂÖ•Â≠¶Âπ¥‰ªΩÔºö" << member[location[1]].intoy << endl
+                 << "Áè≠Âè∑Ôºö" << member[location[1]].cla << endl
+                 << "Â∫ß‰ΩçÂè∑Ôºö" << member[location[1]].clid << endl
+                 << "Ê†°ÂÜÖIDÔºö" << member[location[1]].scid << endl
+                 << "Â≠¶Á±çÂè∑Ôºö" << member[location[1]].naid << endl
                  << endl;
             for (int j = 1; j <= member[location[1]].rsum; j++)
             {
@@ -394,41 +394,41 @@ int main()
                 cout << member[location[1]].record[j] << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝µƒº«¬ºµƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ÁöÑËÆ∞ÂΩïÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &gin);
             while (1)
             {
-                cout << "»∑»œ…æ≥˝«Î ‰»Î°∞yes°±°£" << endl;
+                cout << "Á°ÆËÆ§Âà†Èô§ËØ∑ËæìÂÖ•‚Äúyes‚Äù„ÄÇ" << endl;
                 cin >> in;
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteRecords(location[1], gin);
-                    cout << "…æ≥˝≥…π¶£°" << endl;
+                    cout << "Âà†Èô§ÊàêÂäüÔºÅ" << endl;
                     break;
                 }
-                cout << " ‰»Î¥ÌŒÛ£°";
+                cout << "ËæìÂÖ•ÈîôËØØÔºÅ";
             }
             system("pause");
             return 0;
         }
         else
         {
-            cout << "Œ™ƒ˙’“µΩ" << number << "ÃıΩ·π˚" << endl
+            cout << "‰∏∫ÊÇ®ÊâæÂà∞" << number << "Êù°ÁªìÊûú" << endl
                  << endl;
             for (int j = 1; j <= number; j++)
             {
                 cout << "No." << j << endl
-                     << "–’√˚£∫" << member[location[j]].name << endl
-                     << "–‘±£∫" << member[location[j]].ge << endl
-                     << "≥ˆ…˙»’∆⁄£∫" << member[location[j]].bir << endl
-                     << "»Î—ßƒÍ∑›£∫" << member[location[j]].intoy << endl
-                     << "∞‡∫≈£∫" << member[location[j]].cla << endl
-                     << "◊˘Œª∫≈£∫" << member[location[j]].clid << endl
-                     << "–£ƒ⁄ID£∫" << member[location[j]].scid << endl
-                     << "—ßºÆ∫≈£∫" << member[location[j]].naid << endl
+                     << "ÂßìÂêçÔºö" << member[location[j]].name << endl
+                     << "ÊÄßÂà´Ôºö" << member[location[j]].ge << endl
+                     << "Âá∫ÁîüÊó•ÊúüÔºö" << member[location[j]].bir << endl
+                     << "ÂÖ•Â≠¶Âπ¥‰ªΩÔºö" << member[location[j]].intoy << endl
+                     << "Áè≠Âè∑Ôºö" << member[location[j]].cla << endl
+                     << "Â∫ß‰ΩçÂè∑Ôºö" << member[location[j]].clid << endl
+                     << "Ê†°ÂÜÖIDÔºö" << member[location[j]].scid << endl
+                     << "Â≠¶Á±çÂè∑Ôºö" << member[location[j]].naid << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝º«¬ºµƒ—ß…˙µƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ËÆ∞ÂΩïÁöÑÂ≠¶ÁîüÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &getin);
             for (int j = 1; j <= member[location[getin]].rsum; j++)
             {
@@ -436,19 +436,19 @@ int main()
                 cout << member[location[getin]].record[j] << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝µƒº«¬ºµƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ÁöÑËÆ∞ÂΩïÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &gin);
             while (1)
             {
-                cout << "»∑»œ…æ≥˝«Î ‰»Î°∞yes°±°£" << endl;
+                cout << "Á°ÆËÆ§Âà†Èô§ËØ∑ËæìÂÖ•‚Äúyes‚Äù„ÄÇ" << endl;
                 cin >> in;
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteRecords(location[getin], gin);
-                    cout << "…æ≥˝≥…π¶£°" << endl;
+                    cout << "Âà†Èô§ÊàêÂäüÔºÅ" << endl;
                     break;
                 }
-                cout << " ‰»Î¥ÌŒÛ£°";
+                cout << "ËæìÂÖ•ÈîôËØØÔºÅ";
             }
             system("pause");
             return 0;
@@ -456,7 +456,7 @@ int main()
     }
     else if (getin == 5)
     {
-        cout << "«Î ‰»Î“™…æ≥˝º«¬ºµƒ—ß…˙µƒ∞‡º∂" << endl;
+        cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ËÆ∞ÂΩïÁöÑÂ≠¶ÁîüÁöÑÁè≠Á∫ß" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -468,21 +468,21 @@ int main()
         }
         if (number == 0)
         {
-            cout << "±ß«∏£°Œ“√«√ª”–‘⁄ ˝æ›÷–’“µΩ∏√∞‡º∂µƒ»À°£" << endl;
+            cout << "Êä±Ê≠âÔºÅÊàë‰ª¨Ê≤°ÊúâÂú®Êï∞ÊçÆ‰∏≠ÊâæÂà∞ËØ•Áè≠Á∫ßÁöÑ‰∫∫„ÄÇ" << endl;
             system("pause");
             return 0;
         }
         else if (number == 1)
         {
             cout << endl
-                 << "–’√˚£∫" << member[location[1]].name << endl
-                 << "–‘±£∫" << member[location[1]].ge << endl
-                 << "≥ˆ…˙»’∆⁄£∫" << member[location[1]].bir << endl
-                 << "»Î—ßƒÍ∑›£∫" << member[location[1]].intoy << endl
-                 << "∞‡∫≈£∫" << member[location[1]].cla << endl
-                 << "◊˘Œª∫≈£∫" << member[location[1]].clid << endl
-                 << "–£ƒ⁄ID£∫" << member[location[1]].scid << endl
-                 << "—ßºÆ∫≈£∫" << member[location[1]].naid << endl
+                 << "ÂßìÂêçÔºö" << member[location[1]].name << endl
+                 << "ÊÄßÂà´Ôºö" << member[location[1]].ge << endl
+                 << "Âá∫ÁîüÊó•ÊúüÔºö" << member[location[1]].bir << endl
+                 << "ÂÖ•Â≠¶Âπ¥‰ªΩÔºö" << member[location[1]].intoy << endl
+                 << "Áè≠Âè∑Ôºö" << member[location[1]].cla << endl
+                 << "Â∫ß‰ΩçÂè∑Ôºö" << member[location[1]].clid << endl
+                 << "Ê†°ÂÜÖIDÔºö" << member[location[1]].scid << endl
+                 << "Â≠¶Á±çÂè∑Ôºö" << member[location[1]].naid << endl
                  << endl;
             for (int j = 1; j <= member[location[1]].rsum; j++)
             {
@@ -490,41 +490,41 @@ int main()
                 cout << member[location[1]].record[j] << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝µƒº«¬ºµƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ÁöÑËÆ∞ÂΩïÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &gin);
             while (1)
             {
-                cout << "»∑»œ…æ≥˝«Î ‰»Î°∞yes°±°£" << endl;
+                cout << "Á°ÆËÆ§Âà†Èô§ËØ∑ËæìÂÖ•‚Äúyes‚Äù„ÄÇ" << endl;
                 cin >> in;
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteRecords(location[1], gin);
-                    cout << "…æ≥˝≥…π¶£°" << endl;
+                    cout << "Âà†Èô§ÊàêÂäüÔºÅ" << endl;
                     break;
                 }
-                cout << " ‰»Î¥ÌŒÛ£°";
+                cout << "ËæìÂÖ•ÈîôËØØÔºÅ";
             }
             system("pause");
             return 0;
         }
         else
         {
-            cout << "Œ™ƒ˙’“µΩ" << number << "ÃıΩ·π˚" << endl
+            cout << "‰∏∫ÊÇ®ÊâæÂà∞" << number << "Êù°ÁªìÊûú" << endl
                  << endl;
             for (int j = 1; j <= number; j++)
             {
                 cout << "No." << j << endl
-                     << "–’√˚£∫" << member[location[j]].name << endl
-                     << "–‘±£∫" << member[location[j]].ge << endl
-                     << "≥ˆ…˙»’∆⁄£∫" << member[location[j]].bir << endl
-                     << "»Î—ßƒÍ∑›£∫" << member[location[j]].intoy << endl
-                     << "∞‡∫≈£∫" << member[location[j]].cla << endl
-                     << "◊˘Œª∫≈£∫" << member[location[j]].clid << endl
-                     << "–£ƒ⁄ID£∫" << member[location[j]].scid << endl
-                     << "—ßºÆ∫≈£∫" << member[location[j]].naid << endl
+                     << "ÂßìÂêçÔºö" << member[location[j]].name << endl
+                     << "ÊÄßÂà´Ôºö" << member[location[j]].ge << endl
+                     << "Âá∫ÁîüÊó•ÊúüÔºö" << member[location[j]].bir << endl
+                     << "ÂÖ•Â≠¶Âπ¥‰ªΩÔºö" << member[location[j]].intoy << endl
+                     << "Áè≠Âè∑Ôºö" << member[location[j]].cla << endl
+                     << "Â∫ß‰ΩçÂè∑Ôºö" << member[location[j]].clid << endl
+                     << "Ê†°ÂÜÖIDÔºö" << member[location[j]].scid << endl
+                     << "Â≠¶Á±çÂè∑Ôºö" << member[location[j]].naid << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝º«¬ºµƒ—ß…˙µƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ËÆ∞ÂΩïÁöÑÂ≠¶ÁîüÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &getin);
             for (int j = 1; j <= member[location[getin]].rsum; j++)
             {
@@ -532,19 +532,19 @@ int main()
                 cout << member[location[getin]].record[j] << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝µƒº«¬ºµƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ÁöÑËÆ∞ÂΩïÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &gin);
             while (1)
             {
-                cout << "»∑»œ…æ≥˝«Î ‰»Î°∞yes°±°£" << endl;
+                cout << "Á°ÆËÆ§Âà†Èô§ËØ∑ËæìÂÖ•‚Äúyes‚Äù„ÄÇ" << endl;
                 cin >> in;
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteRecords(location[getin], gin);
-                    cout << "…æ≥˝≥…π¶£°" << endl;
+                    cout << "Âà†Èô§ÊàêÂäüÔºÅ" << endl;
                     break;
                 }
-                cout << " ‰»Î¥ÌŒÛ£°";
+                cout << "ËæìÂÖ•ÈîôËØØÔºÅ";
             }
             system("pause");
             return 0;
@@ -552,7 +552,7 @@ int main()
     }
     else if (getin == 6)
     {
-        cout << "«Î ‰»Î“™…æ≥˝º«¬ºµƒ—ß…˙µƒ◊˘Œª∫≈" << endl;
+        cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ËÆ∞ÂΩïÁöÑÂ≠¶ÁîüÁöÑÂ∫ß‰ΩçÂè∑" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -564,21 +564,21 @@ int main()
         }
         if (number == 0)
         {
-            cout << "±ß«∏£°Œ“√«√ª”–‘⁄ ˝æ›÷–’“µΩ∏√◊˘Œª∫≈µƒ»À°£" << endl;
+            cout << "Êä±Ê≠âÔºÅÊàë‰ª¨Ê≤°ÊúâÂú®Êï∞ÊçÆ‰∏≠ÊâæÂà∞ËØ•Â∫ß‰ΩçÂè∑ÁöÑ‰∫∫„ÄÇ" << endl;
             system("pause");
             return 0;
         }
         else if (number == 1)
         {
             cout << endl
-                 << "–’√˚£∫" << member[location[1]].name << endl
-                 << "–‘±£∫" << member[location[1]].ge << endl
-                 << "≥ˆ…˙»’∆⁄£∫" << member[location[1]].bir << endl
-                 << "»Î—ßƒÍ∑›£∫" << member[location[1]].intoy << endl
-                 << "∞‡∫≈£∫" << member[location[1]].cla << endl
-                 << "◊˘Œª∫≈£∫" << member[location[1]].clid << endl
-                 << "–£ƒ⁄ID£∫" << member[location[1]].scid << endl
-                 << "—ßºÆ∫≈£∫" << member[location[1]].naid << endl
+                 << "ÂßìÂêçÔºö" << member[location[1]].name << endl
+                 << "ÊÄßÂà´Ôºö" << member[location[1]].ge << endl
+                 << "Âá∫ÁîüÊó•ÊúüÔºö" << member[location[1]].bir << endl
+                 << "ÂÖ•Â≠¶Âπ¥‰ªΩÔºö" << member[location[1]].intoy << endl
+                 << "Áè≠Âè∑Ôºö" << member[location[1]].cla << endl
+                 << "Â∫ß‰ΩçÂè∑Ôºö" << member[location[1]].clid << endl
+                 << "Ê†°ÂÜÖIDÔºö" << member[location[1]].scid << endl
+                 << "Â≠¶Á±çÂè∑Ôºö" << member[location[1]].naid << endl
                  << endl;
             for (int j = 1; j <= member[location[1]].rsum; j++)
             {
@@ -586,41 +586,41 @@ int main()
                 cout << member[location[1]].record[j] << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝µƒº«¬ºµƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ÁöÑËÆ∞ÂΩïÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &gin);
             while (1)
             {
-                cout << "»∑»œ…æ≥˝«Î ‰»Î°∞yes°±°£" << endl;
+                cout << "Á°ÆËÆ§Âà†Èô§ËØ∑ËæìÂÖ•‚Äúyes‚Äù„ÄÇ" << endl;
                 cin >> in;
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteRecords(location[1], gin);
-                    cout << "…æ≥˝≥…π¶£°" << endl;
+                    cout << "Âà†Èô§ÊàêÂäüÔºÅ" << endl;
                     break;
                 }
-                cout << " ‰»Î¥ÌŒÛ£°";
+                cout << "ËæìÂÖ•ÈîôËØØÔºÅ";
             }
             system("pause");
             return 0;
         }
         else
         {
-            cout << "Œ™ƒ˙’“µΩ" << number << "ÃıΩ·π˚" << endl
+            cout << "‰∏∫ÊÇ®ÊâæÂà∞" << number << "Êù°ÁªìÊûú" << endl
                  << endl;
             for (int j = 1; j <= number; j++)
             {
                 cout << "No." << j << endl
-                     << "–’√˚£∫" << member[location[j]].name << endl
-                     << "–‘±£∫" << member[location[j]].ge << endl
-                     << "≥ˆ…˙»’∆⁄£∫" << member[location[j]].bir << endl
-                     << "»Î—ßƒÍ∑›£∫" << member[location[j]].intoy << endl
-                     << "∞‡∫≈£∫" << member[location[j]].cla << endl
-                     << "◊˘Œª∫≈£∫" << member[location[j]].clid << endl
-                     << "–£ƒ⁄ID£∫" << member[location[j]].scid << endl
-                     << "—ßºÆ∫≈£∫" << member[location[j]].naid << endl
+                     << "ÂßìÂêçÔºö" << member[location[j]].name << endl
+                     << "ÊÄßÂà´Ôºö" << member[location[j]].ge << endl
+                     << "Âá∫ÁîüÊó•ÊúüÔºö" << member[location[j]].bir << endl
+                     << "ÂÖ•Â≠¶Âπ¥‰ªΩÔºö" << member[location[j]].intoy << endl
+                     << "Áè≠Âè∑Ôºö" << member[location[j]].cla << endl
+                     << "Â∫ß‰ΩçÂè∑Ôºö" << member[location[j]].clid << endl
+                     << "Ê†°ÂÜÖIDÔºö" << member[location[j]].scid << endl
+                     << "Â≠¶Á±çÂè∑Ôºö" << member[location[j]].naid << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝º«¬ºµƒ—ß…˙µƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ËÆ∞ÂΩïÁöÑÂ≠¶ÁîüÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &getin);
             for (int j = 1; j <= member[location[getin]].rsum; j++)
             {
@@ -628,19 +628,19 @@ int main()
                 cout << member[location[getin]].record[j] << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝µƒº«¬ºµƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ÁöÑËÆ∞ÂΩïÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &gin);
             while (1)
             {
-                cout << "»∑»œ…æ≥˝«Î ‰»Î°∞yes°±°£" << endl;
+                cout << "Á°ÆËÆ§Âà†Èô§ËØ∑ËæìÂÖ•‚Äúyes‚Äù„ÄÇ" << endl;
                 cin >> in;
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteRecords(location[getin], gin);
-                    cout << "…æ≥˝≥…π¶£°" << endl;
+                    cout << "Âà†Èô§ÊàêÂäüÔºÅ" << endl;
                     break;
                 }
-                cout << " ‰»Î¥ÌŒÛ£°";
+                cout << "ËæìÂÖ•ÈîôËØØÔºÅ";
             }
             system("pause");
             return 0;
@@ -648,7 +648,7 @@ int main()
     }
     else if (getin == 7)
     {
-        cout << "«Î ‰»Î“™…æ≥˝º«¬ºµƒ—ß…˙µƒ–£ƒ⁄ID" << endl;
+        cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ËÆ∞ÂΩïÁöÑÂ≠¶ÁîüÁöÑÊ†°ÂÜÖID" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -660,21 +660,21 @@ int main()
         }
         if (number == 0)
         {
-            cout << "±ß«∏£°Œ“√«√ª”–‘⁄ ˝æ›÷–’“µΩ”µ”–∏√–£ƒ⁄IDµƒ»À°£" << endl;
+            cout << "Êä±Ê≠âÔºÅÊàë‰ª¨Ê≤°ÊúâÂú®Êï∞ÊçÆ‰∏≠ÊâæÂà∞Êã•ÊúâËØ•Ê†°ÂÜÖIDÁöÑ‰∫∫„ÄÇ" << endl;
             system("pause");
             return 0;
         }
         else if (number == 1)
         {
             cout << endl
-                 << "–’√˚£∫" << member[location[1]].name << endl
-                 << "–‘±£∫" << member[location[1]].ge << endl
-                 << "≥ˆ…˙»’∆⁄£∫" << member[location[1]].bir << endl
-                 << "»Î—ßƒÍ∑›£∫" << member[location[1]].intoy << endl
-                 << "∞‡∫≈£∫" << member[location[1]].cla << endl
-                 << "◊˘Œª∫≈£∫" << member[location[1]].clid << endl
-                 << "–£ƒ⁄ID£∫" << member[location[1]].scid << endl
-                 << "—ßºÆ∫≈£∫" << member[location[1]].naid << endl
+                 << "ÂßìÂêçÔºö" << member[location[1]].name << endl
+                 << "ÊÄßÂà´Ôºö" << member[location[1]].ge << endl
+                 << "Âá∫ÁîüÊó•ÊúüÔºö" << member[location[1]].bir << endl
+                 << "ÂÖ•Â≠¶Âπ¥‰ªΩÔºö" << member[location[1]].intoy << endl
+                 << "Áè≠Âè∑Ôºö" << member[location[1]].cla << endl
+                 << "Â∫ß‰ΩçÂè∑Ôºö" << member[location[1]].clid << endl
+                 << "Ê†°ÂÜÖIDÔºö" << member[location[1]].scid << endl
+                 << "Â≠¶Á±çÂè∑Ôºö" << member[location[1]].naid << endl
                  << endl;
             for (int j = 1; j <= member[location[1]].rsum; j++)
             {
@@ -682,41 +682,41 @@ int main()
                 cout << member[location[1]].record[j] << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝µƒº«¬ºµƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ÁöÑËÆ∞ÂΩïÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &gin);
             while (1)
             {
-                cout << "»∑»œ…æ≥˝«Î ‰»Î°∞yes°±°£" << endl;
+                cout << "Á°ÆËÆ§Âà†Èô§ËØ∑ËæìÂÖ•‚Äúyes‚Äù„ÄÇ" << endl;
                 cin >> in;
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteRecords(location[1], gin);
-                    cout << "…æ≥˝≥…π¶£°" << endl;
+                    cout << "Âà†Èô§ÊàêÂäüÔºÅ" << endl;
                     break;
                 }
-                cout << " ‰»Î¥ÌŒÛ£°";
+                cout << "ËæìÂÖ•ÈîôËØØÔºÅ";
             }
             system("pause");
             return 0;
         }
         else
         {
-            cout << "Œ™ƒ˙’“µΩ" << number << "ÃıΩ·π˚" << endl
+            cout << "‰∏∫ÊÇ®ÊâæÂà∞" << number << "Êù°ÁªìÊûú" << endl
                  << endl;
             for (int j = 1; j <= number; j++)
             {
                 cout << "No." << j << endl
-                     << "–’√˚£∫" << member[location[j]].name << endl
-                     << "–‘±£∫" << member[location[j]].ge << endl
-                     << "≥ˆ…˙»’∆⁄£∫" << member[location[j]].bir << endl
-                     << "»Î—ßƒÍ∑›£∫" << member[location[j]].intoy << endl
-                     << "∞‡∫≈£∫" << member[location[j]].cla << endl
-                     << "◊˘Œª∫≈£∫" << member[location[j]].clid << endl
-                     << "–£ƒ⁄ID£∫" << member[location[j]].scid << endl
-                     << "—ßºÆ∫≈£∫" << member[location[j]].naid << endl
+                     << "ÂßìÂêçÔºö" << member[location[j]].name << endl
+                     << "ÊÄßÂà´Ôºö" << member[location[j]].ge << endl
+                     << "Âá∫ÁîüÊó•ÊúüÔºö" << member[location[j]].bir << endl
+                     << "ÂÖ•Â≠¶Âπ¥‰ªΩÔºö" << member[location[j]].intoy << endl
+                     << "Áè≠Âè∑Ôºö" << member[location[j]].cla << endl
+                     << "Â∫ß‰ΩçÂè∑Ôºö" << member[location[j]].clid << endl
+                     << "Ê†°ÂÜÖIDÔºö" << member[location[j]].scid << endl
+                     << "Â≠¶Á±çÂè∑Ôºö" << member[location[j]].naid << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝º«¬ºµƒ—ß…˙µƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ËÆ∞ÂΩïÁöÑÂ≠¶ÁîüÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &getin);
             for (int j = 1; j <= member[location[getin]].rsum; j++)
             {
@@ -724,19 +724,19 @@ int main()
                 cout << member[location[getin]].record[j] << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝µƒº«¬ºµƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ÁöÑËÆ∞ÂΩïÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &gin);
             while (1)
             {
-                cout << "»∑»œ…æ≥˝«Î ‰»Î°∞yes°±°£" << endl;
+                cout << "Á°ÆËÆ§Âà†Èô§ËØ∑ËæìÂÖ•‚Äúyes‚Äù„ÄÇ" << endl;
                 cin >> in;
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteRecords(location[getin], gin);
-                    cout << "…æ≥˝≥…π¶£°" << endl;
+                    cout << "Âà†Èô§ÊàêÂäüÔºÅ" << endl;
                     break;
                 }
-                cout << " ‰»Î¥ÌŒÛ£°";
+                cout << "ËæìÂÖ•ÈîôËØØÔºÅ";
             }
             system("pause");
             return 0;
@@ -744,7 +744,7 @@ int main()
     }
     else if (getin == 8)
     {
-        cout << "«Î ‰»Î“™…æ≥˝º«¬ºµƒ—ß…˙µƒ—ßºÆ∫≈" << endl;
+        cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ËÆ∞ÂΩïÁöÑÂ≠¶ÁîüÁöÑÂ≠¶Á±çÂè∑" << endl;
         cin >> in;
         for (int i = 1; i <= tail; i++)
         {
@@ -756,21 +756,21 @@ int main()
         }
         if (number == 0)
         {
-            cout << "±ß«∏£°Œ“√«√ª”–‘⁄ ˝æ›÷–’“µΩ”µ”–∏√—ßºÆ∫≈µƒ»À°£" << endl;
+            cout << "Êä±Ê≠âÔºÅÊàë‰ª¨Ê≤°ÊúâÂú®Êï∞ÊçÆ‰∏≠ÊâæÂà∞Êã•ÊúâËØ•Â≠¶Á±çÂè∑ÁöÑ‰∫∫„ÄÇ" << endl;
             system("pause");
             return 0;
         }
         else if (number == 1)
         {
             cout << endl
-                 << "–’√˚£∫" << member[location[1]].name << endl
-                 << "–‘±£∫" << member[location[1]].ge << endl
-                 << "≥ˆ…˙»’∆⁄£∫" << member[location[1]].bir << endl
-                 << "»Î—ßƒÍ∑›£∫" << member[location[1]].intoy << endl
-                 << "∞‡∫≈£∫" << member[location[1]].cla << endl
-                 << "◊˘Œª∫≈£∫" << member[location[1]].clid << endl
-                 << "–£ƒ⁄ID£∫" << member[location[1]].scid << endl
-                 << "—ßºÆ∫≈£∫" << member[location[1]].naid << endl
+                 << "ÂßìÂêçÔºö" << member[location[1]].name << endl
+                 << "ÊÄßÂà´Ôºö" << member[location[1]].ge << endl
+                 << "Âá∫ÁîüÊó•ÊúüÔºö" << member[location[1]].bir << endl
+                 << "ÂÖ•Â≠¶Âπ¥‰ªΩÔºö" << member[location[1]].intoy << endl
+                 << "Áè≠Âè∑Ôºö" << member[location[1]].cla << endl
+                 << "Â∫ß‰ΩçÂè∑Ôºö" << member[location[1]].clid << endl
+                 << "Ê†°ÂÜÖIDÔºö" << member[location[1]].scid << endl
+                 << "Â≠¶Á±çÂè∑Ôºö" << member[location[1]].naid << endl
                  << endl;
             for (int j = 1; j <= member[location[1]].rsum; j++)
             {
@@ -778,41 +778,41 @@ int main()
                 cout << member[location[1]].record[j] << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝µƒº«¬ºµƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ÁöÑËÆ∞ÂΩïÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &gin);
             while (1)
             {
-                cout << "»∑»œ…æ≥˝«Î ‰»Î°∞yes°±°£" << endl;
+                cout << "Á°ÆËÆ§Âà†Èô§ËØ∑ËæìÂÖ•‚Äúyes‚Äù„ÄÇ" << endl;
                 cin >> in;
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteRecords(location[1], gin);
-                    cout << "…æ≥˝≥…π¶£°" << endl;
+                    cout << "Âà†Èô§ÊàêÂäüÔºÅ" << endl;
                     break;
                 }
-                cout << " ‰»Î¥ÌŒÛ£°";
+                cout << "ËæìÂÖ•ÈîôËØØÔºÅ";
             }
             system("pause");
             return 0;
         }
         else
         {
-            cout << "Œ™ƒ˙’“µΩ" << number << "ÃıΩ·π˚" << endl
+            cout << "‰∏∫ÊÇ®ÊâæÂà∞" << number << "Êù°ÁªìÊûú" << endl
                  << endl;
             for (int j = 1; j <= number; j++)
             {
                 cout << "No." << j << endl
-                     << "–’√˚£∫" << member[location[j]].name << endl
-                     << "–‘±£∫" << member[location[j]].ge << endl
-                     << "≥ˆ…˙»’∆⁄£∫" << member[location[j]].bir << endl
-                     << "»Î—ßƒÍ∑›£∫" << member[location[j]].intoy << endl
-                     << "∞‡∫≈£∫" << member[location[j]].cla << endl
-                     << "◊˘Œª∫≈£∫" << member[location[j]].clid << endl
-                     << "–£ƒ⁄ID£∫" << member[location[j]].scid << endl
-                     << "—ßºÆ∫≈£∫" << member[location[j]].naid << endl
+                     << "ÂßìÂêçÔºö" << member[location[j]].name << endl
+                     << "ÊÄßÂà´Ôºö" << member[location[j]].ge << endl
+                     << "Âá∫ÁîüÊó•ÊúüÔºö" << member[location[j]].bir << endl
+                     << "ÂÖ•Â≠¶Âπ¥‰ªΩÔºö" << member[location[j]].intoy << endl
+                     << "Áè≠Âè∑Ôºö" << member[location[j]].cla << endl
+                     << "Â∫ß‰ΩçÂè∑Ôºö" << member[location[j]].clid << endl
+                     << "Ê†°ÂÜÖIDÔºö" << member[location[j]].scid << endl
+                     << "Â≠¶Á±çÂè∑Ôºö" << member[location[j]].naid << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝º«¬ºµƒ—ß…˙µƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ËÆ∞ÂΩïÁöÑÂ≠¶ÁîüÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &getin);
             for (int j = 1; j <= member[location[getin]].rsum; j++)
             {
@@ -820,19 +820,19 @@ int main()
                 cout << member[location[getin]].record[j] << endl
                      << endl;
             }
-            cout << "«Î ‰»Î“™…æ≥˝µƒº«¬ºµƒ–Ú∫≈" << endl;
+            cout << "ËØ∑ËæìÂÖ•Ë¶ÅÂà†Èô§ÁöÑËÆ∞ÂΩïÁöÑÂ∫èÂè∑" << endl;
             scanf(" %d", &gin);
             while (1)
             {
-                cout << "»∑»œ…æ≥˝«Î ‰»Î°∞yes°±°£" << endl;
+                cout << "Á°ÆËÆ§Âà†Èô§ËØ∑ËæìÂÖ•‚Äúyes‚Äù„ÄÇ" << endl;
                 cin >> in;
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteRecords(location[getin], gin);
-                    cout << "…æ≥˝≥…π¶£°" << endl;
+                    cout << "Âà†Èô§ÊàêÂäüÔºÅ" << endl;
                     break;
                 }
-                cout << " ‰»Î¥ÌŒÛ£°";
+                cout << "ËæìÂÖ•ÈîôËØØÔºÅ";
             }
             system("pause");
             return 0;
