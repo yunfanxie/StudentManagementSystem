@@ -33,42 +33,42 @@ void ModifyInfo(int loca, int pj)
     if (pj == 1)
     {
         cout << "请输入修改后的姓名" << endl;
-        cin >> member[loca].name;
+        scanf(" %s", member[loca].name);
     }
     if (pj == 2)
     {
         cout << "请输入修改后的姓别" << endl;
-        cin >> member[loca].ge;
+        scanf(" %s", member[loca].ge);
     }
     if (pj == 3)
     {
         cout << "请输入修改后的出生日期" << endl;
-        cin >> member[loca].bir;
+        scanf(" %s", member[loca].bir);
     }
     if (pj == 4)
     {
         cout << "请输入修改后的入学年份" << endl;
-        cin >> member[loca].intoy;
+        scanf(" %s", member[loca].intoy);
     }
     if (pj == 5)
     {
         cout << "请输入修改后的班级" << endl;
-        cin >> member[loca].cla;
+        scanf(" %s", member[loca].cla);
     }
     if (pj == 6)
     {
         cout << "请输入修改后的座位号" << endl;
-        cin >> member[loca].clid;
+        scanf(" %s", member[loca].clid);
     }
     if (pj == 7)
     {
         cout << "请输入修改后的校内ID" << endl;
-        cin >> member[loca].scid;
+        scanf(" %s", member[loca].scid);
     }
     if (pj == 8)
     {
         cout << "请输入修改后的学籍号" << endl;
-        cin >> member[loca].naid;
+        scanf(" %s", member[loca].naid);
     }
     Refresh();
     cout << "修改成功！" << endl;
@@ -87,7 +87,7 @@ int main()
     }
     for (int i = 1; i <= tail; i++)
     {
-        cin >> member[i].name >> member[i].ge >> member[i].bir >> member[i].intoy >> member[i].cla >> member[i].clid >> member[i].scid >> member[i].naid;
+        scanf(" %s %s %s %s %s %s %s %s", member[i].name, member[i].ge, member[i].bir, member[i].intoy, member[i].cla, member[i].clid, member[i].scid, member[i].naid);
     }
     freopen("CON ", "r", stdin);
     cout << "请输入要修改信息的学生的信息关键词的序号。" << endl;
@@ -104,7 +104,7 @@ int main()
     if (getin == 1)
     {
         cout << "请输入要修改信息的学生的姓名" << endl;
-        cin >> in;
+        scanf(" %s", in);
         for (int i = 1; i <= tail; i++)
         {
             if (strcmp(member[i].name, in) == 0)
@@ -166,7 +166,7 @@ int main()
     else if (getin == 2)
     {
         cout << "请输入要修改信息的学生的性别" << endl;
-        cin >> in;
+        scanf(" %s", in);
         for (int i = 1; i <= tail; i++)
         {
             if (strcmp(member[i].ge, in) == 0)
@@ -228,7 +228,7 @@ int main()
     else if (getin == 3)
     {
         cout << "请输入要修改信息的学生的出生日期" << endl;
-        cin >> in;
+        scanf(" %s", in);
         for (int i = 1; i <= tail; i++)
         {
             if (strcmp(member[i].bir, in) == 0)
@@ -290,7 +290,7 @@ int main()
     else if (getin == 4)
     {
         cout << "请输入要修改信息的学生的入学年份" << endl;
-        cin >> in;
+        scanf(" %s", in);
         for (int i = 1; i <= tail; i++)
         {
             if (strcmp(member[i].intoy, in) == 0)
@@ -352,7 +352,7 @@ int main()
     else if (getin == 5)
     {
         cout << "请输入要修改信息的学生的班级" << endl;
-        cin >> in;
+        scanf(" %s", in);
         for (int i = 1; i <= tail; i++)
         {
             if (strcmp(member[i].cla, in) == 0)
@@ -414,7 +414,7 @@ int main()
     else if (getin == 6)
     {
         cout << "请输入要修改信息的学生的座位号" << endl;
-        cin >> in;
+        scanf(" %s", in);
         for (int i = 1; i <= tail; i++)
         {
             if (strcmp(member[i].clid, in) == 0)
@@ -476,7 +476,7 @@ int main()
     else if (getin == 7)
     {
         cout << "请输入要修改信息的学生的校内ID" << endl;
-        cin >> in;
+        scanf(" %s", in);
         for (int i = 1; i <= tail; i++)
         {
             if (strcmp(member[i].scid, in) == 0)
@@ -538,7 +538,7 @@ int main()
     else if (getin == 8)
     {
         cout << "请输入要修改信息的学生的学籍号" << endl;
-        cin >> in;
+        scanf(" %s", in);
         for (int i = 1; i <= tail; i++)
         {
             if (strcmp(member[i].naid, in) == 0)

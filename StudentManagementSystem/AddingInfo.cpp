@@ -16,7 +16,7 @@ struct student
 void input(int head, int tail)
 {
     for (int i = head; i <= tail; i++)
-        cin >> member[i].name >> member[i].ge >> member[i].bir >> member[i].intoy >> member[i].cla >> member[i].clid >> member[i].scid >> member[i].naid;
+        scanf(" %s %s %s %s %s %s %s %s", member[i].name, member[i].ge, member[i].bir, member[i].intoy, member[i].cla, member[i].clid, member[i].scid, member[i].naid);
 }
 bool control(student x, student y)
 {
@@ -29,7 +29,7 @@ void inputcheck(int head, int tail)
     for (int i = head; i <= tail; i++)
     {
         ls += 1;
-        cin >> member[i].name >> member[i].ge >> member[i].bir >> member[i].intoy >> member[i].cla >> member[i].clid >> member[i].scid >> member[i].naid;
+        scanf(" %s %s %s %s %s %s %s %s", member[i].name, member[i].ge, member[i].bir, member[i].intoy, member[i].cla, member[i].clid, member[i].scid, member[i].naid);
         cout << "No." << ls << endl
              << "姓名：" << member[i].name << endl
              << "性别：" << member[i].ge << endl
@@ -102,7 +102,7 @@ int main()
     {
         scanf(" %d", &member[i].rsum);
         for (int j = 1; j <= member[i].rsum; j++)
-            cin >> member[i].record[j];
+            scanf(" %s", member[i].record[j]);
     }
     freopen("Cache//Cache.txt", "r", stdin);
     scanf(" %d", &sum);

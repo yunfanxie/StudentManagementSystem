@@ -41,7 +41,7 @@ int main()
             cout << "请按照格式在StudentManagementSystem/Data/AddInPut.txt内填充数据,然后输入“yes”。" << endl;
             while (1)
             {
-                cin >> in;
+                scanf(" %s", in);
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                     break;
             }

@@ -60,7 +60,7 @@ int main()
     }
     for (int i = 1; i <= tail; i++)
     {
-        cin >> member[i].name >> member[i].ge >> member[i].bir >> member[i].intoy >> member[i].cla >> member[i].clid >> member[i].scid >> member[i].naid;
+        scanf(" %s %s %s %s %s %s %s %s", member[i].name, member[i].ge, member[i].bir, member[i].intoy, member[i].cla, member[i].clid, member[i].scid, member[i].naid);
     }
     freopen("Cache//Record.txt", "r", stdin);
     scanf(" %d", &tt);
@@ -68,7 +68,7 @@ int main()
     {
         scanf(" %d", &member[i].rsum);
         for (int j = 1; j <= member[i].rsum; j++)
-            cin >> member[i].record[j];
+            scanf(" %s", member[i].record[j]);
     }
     freopen("CON ", "r", stdin);
     cout << "请输入要删除信息的学生的信息关键词的序号。" << endl;
@@ -85,7 +85,7 @@ int main()
     if (getin == 1)
     {
         cout << "请输入要删除信息的学生的姓名" << endl;
-        cin >> in;
+        scanf(" %s", in);
         for (int i = 1; i <= tail; i++)
         {
             if (strcmp(member[i].name, in) == 0)
@@ -115,7 +115,7 @@ int main()
             while (1)
             {
                 cout << "确认删除请输入“yes”。" << endl;
-                cin >> in;
+                scanf(" %s", in);
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteInfo(location[1]);
@@ -149,7 +149,7 @@ int main()
             while (1)
             {
                 cout << "确认删除请输入“yes”。" << endl;
-                cin >> in;
+                scanf(" %s", in);
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteInfo(location[getin]);
@@ -165,7 +165,7 @@ int main()
     else if (getin == 2)
     {
         cout << "请输入要删除信息的学生的性别" << endl;
-        cin >> in;
+        scanf(" %s", in);
         for (int i = 1; i <= tail; i++)
         {
             if (strcmp(member[i].ge, in) == 0)
@@ -195,7 +195,7 @@ int main()
             while (1)
             {
                 cout << "确认删除请输入“yes”。" << endl;
-                cin >> in;
+                scanf(" %s", in);
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteInfo(location[1]);
@@ -229,7 +229,7 @@ int main()
             while (1)
             {
                 cout << "确认删除请输入“yes”。" << endl;
-                cin >> in;
+                scanf(" %s", in);
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteInfo(location[getin]);
@@ -245,7 +245,7 @@ int main()
     else if (getin == 3)
     {
         cout << "请输入要删除信息的学生的出生日期" << endl;
-        cin >> in;
+        scanf(" %s", in);
         for (int i = 1; i <= tail; i++)
         {
             if (strcmp(member[i].bir, in) == 0)
@@ -275,7 +275,7 @@ int main()
             while (1)
             {
                 cout << "确认删除请输入“yes”。" << endl;
-                cin >> in;
+                scanf(" %s", in);
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteInfo(location[1]);
@@ -309,7 +309,7 @@ int main()
             while (1)
             {
                 cout << "确认删除请输入“yes”。" << endl;
-                cin >> in;
+                scanf(" %s", in);
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteInfo(location[getin]);
@@ -325,7 +325,7 @@ int main()
     else if (getin == 4)
     {
         cout << "请输入要删除信息的学生的入学年份" << endl;
-        cin >> in;
+        scanf(" %s", in);
         for (int i = 1; i <= tail; i++)
         {
             if (strcmp(member[i].intoy, in) == 0)
@@ -355,7 +355,7 @@ int main()
             while (1)
             {
                 cout << "确认删除请输入“yes”。" << endl;
-                cin >> in;
+                scanf(" %s", in);
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteInfo(location[1]);
@@ -389,7 +389,7 @@ int main()
             while (1)
             {
                 cout << "确认删除请输入“yes”。" << endl;
-                cin >> in;
+                scanf(" %s", in);
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteInfo(location[getin]);
@@ -405,7 +405,7 @@ int main()
     else if (getin == 5)
     {
         cout << "请输入要删除信息的学生的班级" << endl;
-        cin >> in;
+        scanf(" %s", in);
         for (int i = 1; i <= tail; i++)
         {
             if (strcmp(member[i].cla, in) == 0)
@@ -435,7 +435,7 @@ int main()
             while (1)
             {
                 cout << "确认删除请输入“yes”。" << endl;
-                cin >> in;
+                scanf(" %s", in);
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteInfo(location[1]);
@@ -469,7 +469,7 @@ int main()
             while (1)
             {
                 cout << "确认删除请输入“yes”。" << endl;
-                cin >> in;
+                scanf(" %s", in);
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteInfo(location[getin]);
@@ -485,7 +485,7 @@ int main()
     else if (getin == 6)
     {
         cout << "请输入要删除信息的学生的座位号" << endl;
-        cin >> in;
+        scanf(" %s", in);
         for (int i = 1; i <= tail; i++)
         {
             if (strcmp(member[i].clid, in) == 0)
@@ -515,7 +515,7 @@ int main()
             while (1)
             {
                 cout << "确认删除请输入“yes”。" << endl;
-                cin >> in;
+                scanf(" %s", in);
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteInfo(location[1]);
@@ -549,7 +549,7 @@ int main()
             while (1)
             {
                 cout << "确认删除请输入“yes”。" << endl;
-                cin >> in;
+                scanf(" %s", in);
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteInfo(location[getin]);
@@ -565,7 +565,7 @@ int main()
     else if (getin == 7)
     {
         cout << "请输入要删除信息的学生的校内ID" << endl;
-        cin >> in;
+        scanf(" %s", in);
         for (int i = 1; i <= tail; i++)
         {
             if (strcmp(member[i].scid, in) == 0)
@@ -595,7 +595,7 @@ int main()
             while (1)
             {
                 cout << "确认删除请输入“yes”。" << endl;
-                cin >> in;
+                scanf(" %s", in);
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteInfo(location[1]);
@@ -629,7 +629,7 @@ int main()
             while (1)
             {
                 cout << "确认删除请输入“yes”。" << endl;
-                cin >> in;
+                scanf(" %s", in);
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteInfo(location[getin]);
@@ -645,7 +645,7 @@ int main()
     else if (getin == 8)
     {
         cout << "请输入要删除信息的学生的学籍号" << endl;
-        cin >> in;
+        scanf(" %s", in);
         for (int i = 1; i <= tail; i++)
         {
             if (strcmp(member[i].naid, in) == 0)
@@ -675,7 +675,7 @@ int main()
             while (1)
             {
                 cout << "确认删除请输入“yes”。" << endl;
-                cin >> in;
+                scanf(" %s", in);
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteInfo(location[1]);
@@ -709,7 +709,7 @@ int main()
             while (1)
             {
                 cout << "确认删除请输入“yes”。" << endl;
-                cin >> in;
+                scanf(" %s", in);
                 if (in[0] == 'y' && in[1] == 'e' && in[2] == 's')
                 {
                     DeleteInfo(location[getin]);
